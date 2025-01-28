@@ -1,6 +1,6 @@
 # Leetcode
 
-Automatically package the LeetCode problems written daily into an .MD file through Notion using a Zapier workflow + Webhooks and upload it to the github.
+Automatically package the LeetCode problems written daily into an .MD file through Notion using a **Zapier workflow + Webhooks** and upload it to the github.
 
 <h3 align="left">Tools:</h3>
 <p align="left"> 
