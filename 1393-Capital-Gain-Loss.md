@@ -1,14 +1,6 @@
 # 1393. Capital Gain/Loss  
 
-  Methods: Database </br> Difficulty: Medium </br> </br>SQL Schema
-
----
-
-Pandas Schema
-
----
-
-Table: `Stocks`
+  Methods: Database </br> Difficulty: Medium </br> </br>Table: `Stocks`
 
 ```plain text
 +---------------+---------+
