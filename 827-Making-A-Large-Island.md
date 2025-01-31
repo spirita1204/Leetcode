@@ -38,6 +38,56 @@ Explanation: Can't change any 0 to 1, only one island with area = 4.
 - `n == grid[i].length`
 - `1 <= n <= 500`
 - `grid[i][j]` is either `0` or `1`.
+**Time Limit Exceeded **
+
+```sql
+class Solution {
+    int[] dirs = new int[]{0, 1, 0, -1, 0};
+
+    public int largestIsland(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
+        int max = 0;
+
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                max = Math.max(max, bfs(grid, i, j, m, n));
+            }
+        }
+        return max;
+    }
+    private int bfs(int[][] grid, int i, int j, int m, int n) {
+        int sum = 0;
+        boolean[][] vis = new boolean[m][n];
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(new int[]{i, j});
+        
+        while(!q.isEmpty()) {
+            int[] e = q.poll();
+            
+            if(vis[e[0]][e[1]])
+                continue;
+            vis[e[0]][e[1]] = true;
+            sum++;
+
+            for(int dir = 0; dir < 4; dir++) {
+                int x = e[0] + dirs[dir];
+                int y = e[1] + dirs[dir + 1];
+                
+                if(x < 0 || x >= m || y < 0 || y >= n || vis[x][y] || grid[x][y] == 0) 
+                    continue;
+                if(grid[x][y] == 1) {
+                    q.offer(new int[]{x, y});
+                }
+            }
+        }
+        return sum;
+    }
+}
+```
+
+調整成以下
+
 ```java
 class Solution {
     int[] dirs = new int[]{0, 1, 0, -1, 0};
@@ -109,54 +159,6 @@ class Solution {
             }
         }
         return size;
-    }
-}
-```
-
-Time Limit Exceeded
-
-```java
-class Solution {
-    int[] dirs = new int[]{0, 1, 0, -1, 0};
-
-    public int largestIsland(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int max = 0;
-
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                max = Math.max(max, bfs(grid, i, j, m, n));
-            }
-        }
-        return max;
-    }
-    private int bfs(int[][] grid, int i, int j, int m, int n) {
-        int sum = 0;
-        boolean[][] vis = new boolean[m][n];
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{i, j});
-        
-        while(!q.isEmpty()) {
-            int[] e = q.poll();
-            
-            if(vis[e[0]][e[1]])
-                continue;
-            vis[e[0]][e[1]] = true;
-            sum++;
-
-            for(int dir = 0; dir < 4; dir++) {
-                int x = e[0] + dirs[dir];
-                int y = e[1] + dirs[dir + 1];
-                
-                if(x < 0 || x >= m || y < 0 || y >= n || vis[x][y] || grid[x][y] == 0) 
-                    continue;
-                if(grid[x][y] == 1) {
-                    q.offer(new int[]{x, y});
-                }
-            }
-        }
-        return sum;
     }
 }
 ```
