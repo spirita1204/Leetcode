@@ -113,9 +113,9 @@ class Solution {
 }
 ```
 
+Time Limit Exceeded
 
-
-```sql
+```java
 class Solution {
     int[] dirs = new int[]{0, 1, 0, -1, 0};
 
