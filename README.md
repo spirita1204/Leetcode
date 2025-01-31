@@ -15,6 +15,7 @@ Automatically package the LeetCode problems written daily into an .MD file throu
 -------------------------------
 1.Run Javascript 取代標題底線
 -------------------------------
+
 // this is wrapped in an `async` function
 // you can use await throughout the function
 const content = inputData.content;
@@ -24,9 +25,11 @@ const replacedContent = content
   .replace(/\//g, '-'); // 將 '/' 替換為 '-'
 
 return { result: replacedContent };
+
 -------------------------------
 2.Run Javascript 將內容 Base64 進行傳輸
 -------------------------------
+
 const content = inputData.content;
 const methods = inputData.methods;
 const dataStructure = inputData.dataStructure;
@@ -48,9 +51,11 @@ combinedContent += ("</br>" + content);
 const encodedContent = Buffer.from(combinedContent).toString('base64');
 
 return { encoded: encodedContent };
+
 -------------------------------
 3.Run Python 透過Github API 自動創建/更新文件
 -------------------------------
+
 import requests
 import base64
 
