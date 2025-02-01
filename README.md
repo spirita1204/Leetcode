@@ -91,7 +91,7 @@ if response.status_code == 201:
 else:
     print(f"Error: {response.status_code}, {response.text}")
     if(response.status_code == 422): #如果是文件已存在的錯誤碼，則嘗試覆蓋文件
-        # 获取文件sha
+        # 獲取文件sha
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             sha = response.json()['sha']
