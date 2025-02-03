@@ -2,17 +2,9 @@
 
   Methods: Basic logic </br> Difficulty: Easy </br> </br>You are given an array of integers `nums`. Return *the length of the ****longest*****
 
-*subarray*
+*subarray of  *nums *which is either ****strictly increasing**** or ****strictly decreasing***. 
 
-*of*
-
-```plain text
-nums
-```
-
-*which is either ****strictly increasing**** or ****strictly decreasing***
-
-.
+---
 
 **Example 1:**
 
@@ -28,6 +20,8 @@ The strictly decreasing subarrays of `nums` are `[1]`, `[2]`, `[3]`, `[3]`
 
 Hence, we return `2`.
 
+---
+
 **Example 2:**
 
 **Input:** nums = [3,3,3,3]
@@ -41,6 +35,8 @@ The strictly increasing subarrays of `nums` are `[3]`, `[3]`, `[3]`, and `
 The strictly decreasing subarrays of `nums` are `[3]`, `[3]`, `[3]`, and `[3]`.
 
 Hence, we return `1`.
+
+---
 
 **Example 3:**
 
