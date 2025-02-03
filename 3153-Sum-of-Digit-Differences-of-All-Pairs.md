@@ -1,9 +1,6 @@
-# 3153. Sum of Digit Differences of All Pairs
+# 3153. Sum of Digit Differences of All Pairs  
 
-Methods: Basic logic
-Difficulty: Medium
-
-Medium
+  Methods: Basic logic </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -30,7 +27,6 @@ We have the following:
 - The digit difference between **1**3 and **2**3 is 1.
 - The digit difference between 1**3** and 1**2** is 1.
 - The digit difference between **23** and **12** is 2.
-
 So the total sum of digit differences between all pairs of integers is `1 + 1 + 2 = 4`.
 
 **Example 2:**
@@ -48,7 +44,6 @@ All the integers in the array are the same. So the total sum of digit difference
 - `2 <= nums.length <= 105`
 - `1 <= nums[i] < 109`
 - All integers in `nums` have the same number of digits.
-
 ```java
 class Solution {
     public long sumDigitDifferences(int[] nums) {
@@ -77,3 +72,4 @@ class Solution {
     }
 }
 ```
+
