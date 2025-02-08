@@ -123,3 +123,21 @@ class NumberContainers {
  */
 ```
 
+### `**PriorityQueue**`** 比 **`**TreeSet**`** 更快的主要原因**
+
+### **(1) **`**PriorityQueue**`** 只維護「堆頂最小值」，而 **`**TreeSet**`** 維護整個排序結構**
+
+- `TreeSet` 本質上是一個 **紅黑樹 (Red-Black Tree)**，它**維護整個集合的順序**，所以在插入或刪除時需要調整平衡。
+- `PriorityQueue` 是 **最小堆 (Min Heap)**，它**只確保堆頂是最小的**，不需要維護完整的排序結構，因此 **增刪的實際效率通常優於 **`**TreeSet**`。
+### **(2) **`**find()**`** 操作的優化**
+
+- `TreeSet.first()` 直接返回最小索引，時間複雜度是 `O(1)`。
+- `PriorityQueue.peek()` 也是 `O(1)`，但由於 `PriorityQueue` 內部結構比 `TreeSet` 更簡單，因此 `peek()` 的實際執行速度可能更快。
+### **(3) **`**PriorityQueue**`** 適合「頻繁查詢最小值」的場景**
+
+- 你的 `find()` 方法只是查詢最小索引，而不會頻繁移除非堆頂的元素。
+- `**PriorityQueue**`** 更適合這種場景，因為它只確保最小值在堆頂**，所以 `peek()` 很快。
+```java
+Heap is apparently much faster - once you realize that you don't need to clean up overwritten values at each change() if you validate during find().
+```
+
