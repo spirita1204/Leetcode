@@ -37,8 +37,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "Your Name"
-        git config --global user.email "your_email@example.com"
+        git config --global user.name "spirita1204"
+        git config --global user.email "daniel23232326@gmail.com"
         git add README.md
         git commit -m "Update LeetCode solved count"
         git push
