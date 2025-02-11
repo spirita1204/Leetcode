@@ -53,7 +53,7 @@ jobs:
         git config --global user.email "daniel23232326@gmail.com"
 
         # Authenticate using the GitHub token
-        git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/spirita1204/Leetcode.git
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/spirita1204/Leetcode.git
 
         # Check if there were any changes to commit
         if git diff --quiet; then
