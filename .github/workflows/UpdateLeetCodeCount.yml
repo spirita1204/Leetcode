@@ -1,4 +1,4 @@
-name: Update LeetCode Count
+name: Update LeetCode Count Badge
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  update-counter:
+  update-badge:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,18 +27,33 @@ jobs:
         # Extract totalSolved count from the API response
         solved_count=$(echo "$response" | jq -r '.totalSolved')
         
-        # Update README.md with the new solved count
+        # If solved_count is valid, create a shield.io badge and update README.md
         if [ "$solved_count" != "null" ]; then
           echo "Updating solved count in README.md..."
-          sed -i "s/LeetCode%20Solved-[0-9]\+/LeetCode%20Solved-${solved_count}/" README.md
+          
+          # Create a new badge URL
+          badge_url="https://img.shields.io/badge/LeetCode%20Solved-${solved_count}-red"
+          
+          # Use sed to replace the existing badge or add the new one to README.md
+          sed -i "s|https://img.shields.io/badge/LeetCode%20Solved-[0-9]\+|${badge_url}|g" README.md || echo "No existing badge found, adding new one."
+          
+          # If no match, add the badge to the end of the README.md file
+          if ! grep -q "LeetCode%20Solved" README.md; then
+            echo "![LeetCode Solved](${badge_url})" >> README.md
+          fi
         else
           echo "Failed to retrieve solved count."
         fi
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "spirita1204"
-        git config --global user.email "daniel23232326@gmail.com"
-        git add README.md
-        git commit -m "Update LeetCode solved count"
-        git push
+        # Check if there were any changes to commit
+        if git diff --quiet; then
+          echo "No changes to commit."
+        else
+          git config --global user.name "spirita1204"
+          git config --global user.email "daniel23232326@gmail.com"
+          git add README.md
+          git commit -m "Update LeetCode solved count badge"
+          git push
+        fi
