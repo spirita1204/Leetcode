@@ -13,8 +13,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install curl
-      run: sudo apt-get install curl
+    - name: Install curl and jq
+      run: |
+        sudo apt-get install curl jq
 
     - name: Get LeetCode solved count from API
       run: |
@@ -47,12 +48,17 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        # Set up git configuration
+        git config --global user.name "spirita1204"
+        git config --global user.email "daniel23232326@gmail.com"
+
+        # Authenticate using the GitHub token
+        git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/spirita1204/Leetcode.git
+
         # Check if there were any changes to commit
         if git diff --quiet; then
           echo "No changes to commit."
         else
-          git config --global user.name "spirita1204"
-          git config --global user.email "daniel23232326@gmail.com"
           git add README.md
           git commit -m "Update LeetCode solved count badge"
           git push
