@@ -9,6 +9,9 @@ jobs:
   update-badge:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Allow write permissions to update the repository
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -51,9 +54,6 @@ jobs:
         # Set up git configuration
         git config --global user.name "spirita1204"
         git config --global user.email "daniel23232326@gmail.com"
-
-        # Authenticate using the GitHub token
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/spirita1204/Leetcode.git
 
         # Check if there were any changes to commit
         if git diff --quiet; then
