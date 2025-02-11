@@ -112,4 +112,3 @@ else:
 return {'success': 'success'}
 
 ```
-![LeetCode Solved](https://img.shields.io/badge/LeetCode%20Solved-848-red)
