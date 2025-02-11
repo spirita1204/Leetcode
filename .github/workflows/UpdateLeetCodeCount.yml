@@ -13,44 +13,27 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+    - name: Install curl
+      run: sudo apt-get install curl
 
-    - name: Install requests
+    - name: Get LeetCode solved count from API
       run: |
-        python -m pip install --upgrade pip
-        pip install requests
-
-    - name: Get LeetCode solved count
-      run: |
-        python -c '
-import requests
-import re
-
-def get_leetcode_solved_count(username):
-    url = f"https://leetcode.com/{username}/"
-    response = requests.get(url)
-    match = re.search(r'class="total-solved">(.*?)</strong>', response.text)
-    if match:
-        solved_count = match.group(1)
-        return int(solved_count)
-    else:
-        return None
-
-username = "spirita1204"
-solved_count = get_leetcode_solved_count(username)
-if solved_count:
-    print(f"{username} has solved {solved_count} problems on LeetCode.")
-    with open("README.md", "r") as file:
-        content = file.read()
-    updated_content = re.sub(r"LeetCode%20Solved-[0-9]+", f"LeetCode%20Solved-{solved_count}", content)
-    with open("README.md", "w") as file:
-        file.write(updated_content)
-else:
-    print(f"Could not retrieve the solved count for {username}.")
-'
+        # Set the LeetCode username
+        username="spirita1204"
+        
+        # Call the API and get the total solved count
+        response=$(curl -s "https://leetcode-stats-api.herokuapp.com/$username")
+        
+        # Extract totalSolved count from the API response
+        solved_count=$(echo "$response" | jq -r '.totalSolved')
+        
+        # Update README.md with the new solved count
+        if [ "$solved_count" != "null" ]; then
+          echo "Updating solved count in README.md..."
+          sed -i "s/LeetCode%20Solved-[0-9]\+/LeetCode%20Solved-${solved_count}/" README.md
+        else
+          echo "Failed to retrieve solved count."
+        fi
 
     - name: Commit and push changes
       run: |
