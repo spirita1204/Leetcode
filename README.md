@@ -1,3 +1,5 @@
+![LeetCode Total](https://img.shields.io/badge/LeetCode%20Solved-848-red) ![Easy](https://img.shields.io/badge/Easy-281-green) ![Medium](https://img.shields.io/badge/Medium-499-yellow) ![Hard](https://img.shields.io/badge/Hard-68-blue) ![Acceptance Rate](https://img.shields.io/badge/Acceptance%20Rate-62.53%25-lightgrey) ![Ranking](https://img.shields.io/badge/Ranking-31868-purple)
+
 ![LeetCode Solved](https://img.shields.io/badge/LeetCode%20Solved-848-red)
 ![LeetCode Solved](https://img.shields.io/badge/LeetCode%20Solved-848-red)
 # Leetcode
