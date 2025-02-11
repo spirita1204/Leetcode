@@ -1,4 +1,5 @@
 ![LeetCode Solved](https://img.shields.io/badge/LeetCode%20Solved-848-red)
+![LeetCode Solved](https://img.shields.io/badge/LeetCode%20Solved-848-red)
 # Leetcode
 
 Automatically package the LeetCode problems written daily into an .MD file through Notion using a **Zapier workflow + Webhooks** and upload it to the github.
