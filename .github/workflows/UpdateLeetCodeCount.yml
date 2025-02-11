@@ -1,16 +1,18 @@
-name: Update LeetCode Count Badge
+name: Update LeetCode Stats Badge
 
 on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 0 * * *'  # 每天執行一次
 
 jobs:
   update-badge:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # Allow write permissions to update the repository
+      contents: write  # 允許 GitHub Actions 修改文件
 
     steps:
     - name: Checkout repository
@@ -20,41 +22,58 @@ jobs:
       run: |
         sudo apt-get install curl jq
 
-    - name: Get LeetCode solved count from API
+    - name: Get LeetCode statistics from API
       run: |
-        # Set the LeetCode username
+        # 設定 LeetCode 使用者名稱
         username="spirita1204"
-        
-        # Call the API and get the total solved count
+
+        # 調用 API 並獲取 JSON 數據
         response=$(curl -s "https://leetcode-stats-api.herokuapp.com/$username")
-        
-        # Extract totalSolved count from the API response
-        solved_count=$(echo "$response" | jq -r '.totalSolved')
-        
-        # If solved_count is valid, create a shield.io badge and update README.md
-        if [ "$solved_count" != "null" ]; then
-          echo "Updating solved count in README.md..."
-          
-          # Create a new badge URL
-          badge_url="https://img.shields.io/badge/LeetCode%20Solved-${solved_count}-red"
-          
-          # Insert the badge at the top of README.md
-          sed -i "1s|^|![LeetCode Solved](${badge_url})\n|" README.md
+
+        # 提取需要的數據
+        totalSolved=$(echo "$response" | jq -r '.totalSolved')
+        easySolved=$(echo "$response" | jq -r '.easySolved')
+        mediumSolved=$(echo "$response" | jq -r '.mediumSolved')
+        hardSolved=$(echo "$response" | jq -r '.hardSolved')
+        acceptanceRate=$(echo "$response" | jq -r '.acceptanceRate')
+        ranking=$(echo "$response" | jq -r '.ranking')
+
+        # 確保數據有效
+        if [ "$totalSolved" != "null" ]; then
+          echo "Updating LeetCode stats in README.md..."
+
+          # 創建 Badge URL
+          badge_total="https://img.shields.io/badge/LeetCode%20Solved-${totalSolved}-red"
+          badge_easy="https://img.shields.io/badge/Easy-${easySolved}-green"
+          badge_medium="https://img.shields.io/badge/Medium-${mediumSolved}-yellow"
+          badge_hard="https://img.shields.io/badge/Hard-${hardSolved}-blue"
+          badge_acceptance="https://img.shields.io/badge/Acceptance%20Rate-${acceptanceRate}%25-lightgrey"
+          badge_ranking="https://img.shields.io/badge/Ranking-${ranking}-purple"
+
+          # 生成 README 標頭
+          header="![LeetCode Total](${badge_total}) ![Easy](${badge_easy}) ![Medium](${badge_medium}) ![Hard](${badge_hard}) ![Acceptance Rate](${badge_acceptance}) ![Ranking](${badge_ranking})"
+
+          # 檢查 README.md 是否已經包含 badge，若有則替換，否則插入
+          if grep -q "LeetCode Total" README.md; then
+            sed -i "1s|^.*$|$header\n|" README.md
+          else
+            sed -i "1s|^|$header\n\n|" README.md
+          fi
         else
-          echo "Failed to retrieve solved count."
+          echo "Failed to retrieve LeetCode stats."
         fi
 
     - name: Commit and push changes
       run: |
-        # Set up git configuration
+        # 設置 Git 配置
         git config --global user.name "spirita1204"
         git config --global user.email "daniel23232326@gmail.com"
 
-        # Check if there were any changes to commit
+        # 檢查是否有變更
         if git diff --quiet; then
           echo "No changes to commit."
         else
           git add README.md
-          git commit -m "Update LeetCode solved count badge at the top"
+          git commit -m "Update LeetCode stats badges"
           git push
         fi
