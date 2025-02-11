@@ -1,0 +1,61 @@
+name: Update LeetCode Count
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-counter:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install requests
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Get LeetCode solved count
+      run: |
+        python -c "
+import requests
+import re
+
+def get_leetcode_solved_count(username):
+    url = f'https://leetcode.com/{username}/'
+    response = requests.get(url)
+    match = re.search(r'class=\"total-solved\">(.*?)</strong>', response.text)
+    if match:
+        solved_count = match.group(1)
+        return int(solved_count)
+    else:
+        return None
+
+username = 'spirita1204'
+solved_count = get_leetcode_solved_count(username)
+if solved_count:
+    print(f'{username} has solved {solved_count} problems on LeetCode.')
+    with open('README.md', 'r') as file:
+        content = file.read()
+    updated_content = content.replace('LeetCode%20Solved-[0-9]+', f'LeetCode%20Solved-{solved_count}')
+    with open('README.md', 'w') as file:
+        file.write(updated_content)
+else:
+    print(f'Could not retrieve the solved count for {username}.')
+"
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "Your Name"
+        git config --global user.email "your_email@example.com"
+        git add README.md
+        git commit -m "Update LeetCode solved count"
+        git push
