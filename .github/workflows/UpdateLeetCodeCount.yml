@@ -38,13 +38,8 @@ jobs:
           # Create a new badge URL
           badge_url="https://img.shields.io/badge/LeetCode%20Solved-${solved_count}-red"
           
-          # Use sed to replace the existing badge or add the new one to README.md
-          sed -i "s|https://img.shields.io/badge/LeetCode%20Solved-[0-9]\+|${badge_url}|g" README.md || echo "No existing badge found, adding new one."
-          
-          # If no match, add the badge to the end of the README.md file
-          if ! grep -q "LeetCode%20Solved" README.md; then
-            echo "![LeetCode Solved](${badge_url})" >> README.md
-          fi
+          # Insert the badge at the top of README.md
+          sed -i "1s|^|![LeetCode Solved](${badge_url})\n|" README.md
         else
           echo "Failed to retrieve solved count."
         fi
@@ -60,6 +55,6 @@ jobs:
           echo "No changes to commit."
         else
           git add README.md
-          git commit -m "Update LeetCode solved count badge"
+          git commit -m "Update LeetCode solved count badge at the top"
           git push
         fi
