@@ -102,3 +102,38 @@ class Solution {
 }
 ```
 
+正常解 : 使用map 
+
+```java
+class Solution {
+    public int maximumSum(int[] nums) {
+        Map<Integer, Integer> highestSum = new HashMap<>();
+
+        int ans = -1;
+        for(int num : nums) {
+            int sum = sumOfDigits(num);
+            if (highestSum.containsKey(sum)) {
+                ans = Math.max(ans, highestSum.get(sum) + num);
+                if (num > highestSum.get(sum)) {
+                    highestSum.put(sum, num);
+                }
+            } else {
+                highestSum.put(sum, num);
+            }
+        }
+
+        return ans;
+    }
+
+    private static int sumOfDigits(int num) {
+        int sum = 0;
+        while(num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+
+        return sum;
+    }
+}
+```
+
