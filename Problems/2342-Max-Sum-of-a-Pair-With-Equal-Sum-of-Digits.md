@@ -73,3 +73,32 @@ class Solution {
 }
 ```
 
+最優解
+
+```java
+class Solution {
+    public int maximumSum(int[] nums) {
+        int[] max = new int[100];
+        int ans = -1;
+        for (int x : nums) {
+            int dsum = 0;
+            int temp = x;
+            dsum = sumOfDigits(temp);
+            if (max[dsum] != 0)
+                ans = Math.max(ans, x + max[dsum]);
+            max[dsum] = Math.max(max[dsum], x);
+        }
+        return ans;
+    }
+
+    private int sumOfDigits(int num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+}
+```
+
