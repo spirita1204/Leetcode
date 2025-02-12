@@ -29,6 +29,7 @@ Explanation: There are no two numbers that satisfy the conditions, so we return 
 
 - `1 <= nums.length <= 105`
 - `1 <= nums[i] <= 109`
+  
 Hint 1
 
 What is the largest possible sum of digits a number can have?
