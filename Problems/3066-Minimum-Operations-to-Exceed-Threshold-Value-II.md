@@ -68,3 +68,30 @@ class Solution {
 }
 ```
 
+優化
+
+```javascript
+class Solution {
+    public int minOperations(int[] nums, int k) {
+        Queue<Integer> pq = new PriorityQueue<>();
+
+        for (int num : nums)
+            pq.offer(num);
+        int res = 0;
+        while (!pq.isEmpty() && pq.peek() < k) {
+            int e1 = pq.poll();
+            if (pq.isEmpty()) {
+                res++;
+                break;
+            }
+            int e2 = pq.poll();
+            long num = (long) (e1 * 2) + e2;
+            if (num < k)
+                pq.offer((int) num);
+            res++;
+        }
+        return res;
+    }
+}
+```
+
