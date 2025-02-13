@@ -54,7 +54,7 @@ class Solution {
             long e1 = pq.poll();
             long e2 = pq.poll();
             if (e1 < k || e2 < k) {
-                long cal = (long) Math.min(e1, e2) * (long) 2 + (long) Math.max(e1, e2);
+                long cal = (long) e1 * 2 + (long) e2;
                 pq.offer(cal);
                 res++;
             } else {
