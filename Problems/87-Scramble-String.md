@@ -1,5 +1,6 @@
 # 87. Scramble String
 
+Data structure: Hash Table
 Methods: DFS
 Difficulty: Hard
 

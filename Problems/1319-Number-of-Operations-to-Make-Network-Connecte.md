@@ -1,5 +1,6 @@
 # 1319. Number of Operations to Make Network Connected
 
+Methods: DFS
 Data structure: Graph
 Difficulty: Medium
 

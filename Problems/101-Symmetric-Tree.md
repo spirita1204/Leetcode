@@ -1,5 +1,6 @@
 # 101. Symmetric Tree
 
+Data structure: Stack
 Methods: BFS
 Difficulty: Easy
 

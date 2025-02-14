@@ -1,5 +1,6 @@
 # 662. Maximum Width of Binary Tree
 
+Methods: BFS
 Data structure: Hash Table
 Difficulty: Medium
 

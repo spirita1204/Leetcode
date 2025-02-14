@@ -1,6 +1,7 @@
 # 2360. Longest Cycle in a Graph
 
 Methods: BFS
+Data structure: Graph
 Difficulty: Hard
 
 [https://www.youtube.com/watch?v=_eeiFV137pw&ab_channel=HuifengGuan](https://www.youtube.com/watch?v=_eeiFV137pw&ab_channel=HuifengGuan)
@@ -43,7 +44,7 @@ Explanation: There are no cycles in this graph.
 - `1 <= edges[i] < n`
 - `edges[i] != i`
 
-```html
+```java
 class Solution {
     public int longestCycle(int[] edges) {
         //判斷有無indegree 然後刪除完 遍歷最大的圈

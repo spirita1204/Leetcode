@@ -1,5 +1,6 @@
 # 106. Construct Binary Tree from Inorder and Postorder Traversal
 
+Data structure: Hash Table
 Methods: DFS
 Difficulty: Medium
 
