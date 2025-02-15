@@ -47,10 +47,10 @@ class Solution {
     }
 
     private boolean recursion(int ii, int i) {
-        if(ii == i) return true;
-        if(ii == 0) return i == 0;
+        if(ii == i) return true;// 相等代表可以找到相符
+        if(ii == 0) return i == 0
     
-        int len = Math.min(ii, 1000);
+        int len = Math.min(ii, 1000);// 不用比較到1000000, 因為一邊除一邊取餘數
 
         for(int idx = 10; idx <= len; idx *= 10) {
             //                左      右
@@ -61,4 +61,6 @@ class Solution {
     }
 }
 ```
+
+優化dp 
 
