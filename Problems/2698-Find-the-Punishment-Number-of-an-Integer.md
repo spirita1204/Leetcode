@@ -36,6 +36,14 @@ Hence, the punishment number of 37 is 1 + 81 + 100 + 1296 = 1478
 **Constraints: **
 
 - `1 <= n <= 1000`
+### Recursion: 
+
+Runtime **76.49%**
+
+Memory **40.81**
+
+MBBeats **82.76%**
+
 ```java
 class Solution {
     public int punishmentNumber(int n) {
@@ -62,5 +70,5 @@ class Solution {
 }
 ```
 
-優化dp 
+
 
