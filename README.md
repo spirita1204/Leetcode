@@ -1,64 +1,9 @@
 ![LeetCode Total](https://img.shields.io/badge/LeetCode%20Solved-862-red) ![Easy](https://img.shields.io/badge/Easy-282-green) ![Medium](https://img.shields.io/badge/Medium-511-yellow) ![Hard](https://img.shields.io/badge/Hard-69-blue) ![Acceptance Rate](https://img.shields.io/badge/Acceptance%20Rate-62.8%25-lightgrey) ![Ranking](https://img.shields.io/badge/Ranking-30665-purple)
 
+## LeetCode Statistics
+<img src="https://leetcard.jacoblin.cool/spirita1204" alt="My LeetCode statistics" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Leetcode
-
-Automatically package the LeetCode problems written daily into an .MD file through Notion using a **Zapier workflow + Webhooks** and upload it to the github.
+Automatically package the LeetCode problems written daily into an .md file through Notion using a **Zapier workflow + Webhooks** and upload it to the github.
 
 <h3 align="left">Tools:</h3>
 <p align="left"> 
