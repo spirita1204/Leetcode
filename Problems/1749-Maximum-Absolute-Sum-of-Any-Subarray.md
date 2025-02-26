@@ -52,7 +52,26 @@ class Solution {
 }
 ```
 
-### 最優解
+最優解
+
+```java
+class Solution {
+    public int maxAbsoluteSum(int[] a) {
+        int len = a.length;
+        int sum = 0;
+        int min = 0, max = 0;
+
+        for (int i = 0; i < len; i++) {
+            sum = sum + a[i];
+            if (sum > max)
+                max = sum;
+            if (sum < min)
+                min = sum;
+        }
+        return max - min;
+    }
+}
+```
 
 
 
