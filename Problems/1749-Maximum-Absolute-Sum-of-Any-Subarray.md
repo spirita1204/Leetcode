@@ -14,7 +14,6 @@ Note that `abs(x)` is defined as follows:
 Input: nums = [1,-3,2,3,-4]
 Output: 5
 Explanation: The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.
-
 ```
 
 **Example 2:**
@@ -23,7 +22,6 @@ Explanation: The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.
 Input: nums = [2,-5,1,-4,3,-2]
 Output: 8
 Explanation: The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.
-
 ```
 
 **Constraints:**
