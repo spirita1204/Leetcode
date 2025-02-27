@@ -8,7 +8,7 @@ Given a **strictly increasing** array `arr` of positive integers forming a s
 
 A **subsequence** is derived from another sequence `arr` by deleting any number of elements (including none) from `arr`, without changing the order of the remaining elements. For example, `[3, 5, 8]` is a subsequence of `[3, 4, 5, 6, 7, 8]`.
 
-**Example 1: **
+**Example 1:**
 
 ```plain text
 Input: arr = [1,2,3,4,5,6,7,8]
