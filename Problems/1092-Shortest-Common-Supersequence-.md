@@ -1,6 +1,6 @@
 # 1092. Shortest Common Supersequence   
 
-  Methods: DP </br> Difficulty: Hard </br> </br>Given two strings `str1` and `str2`, return *the shortest string that has both *`str1`* and *`str2`* as ****subsequences***. If there are multiple valid strings, return **any** of them.
+  Methods: DP </br> Difficulty: Hard </br> Similar: 1143 </br> </br>Given two strings `str1` and `str2`, return *the shortest string that has both *`str1`* and *`str2`* as ****subsequences***. If there are multiple valid strings, return **any** of them.
 
 A string `s` is a **subsequence** of string `t` if deleting some number of characters from `t` (possibly `0`) results in the string `s`.
 
@@ -40,7 +40,57 @@ Hint 2
 
 We can use this information to recover the shortest common supersequence.
 
-### 1.
+### 1.DP
+
+```java
+class Solution {
+    public String shortestCommonSupersequence(String str1, String str2) {
+        // str1: abac
+        // str2: cab
+        // DP[i][j] represents the longest common subsequence of text1[0 ... i] & text2[0 ... j].
+        int i = str1.length();
+        int j = str2.length();
+        int[][] dp = new int[i + 1][j + 1];
+        // 建構LCS DP
+        for (int x = 1; x < i + 1; x++) {
+            for (int y = 1; y < j + 1; y++) {
+                if (str1.charAt(x - 1) == str2.charAt(y - 1)) {
+                    dp[x][y] = dp[x - 1][y - 1] + 1;
+                } else {
+                    dp[x][y] = Math.max(dp[x - 1][y], dp[x][y - 1]);
+                }
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        int row = i, col = j;
+        // 反過來 比較
+        while (row > 0 && col > 0) {
+            if (str1.charAt(row - 1) == str2.charAt(col - 1)) {
+                sb.append(str1.charAt(row - 1));
+                row--;
+                col--;
+            } else if (dp[row - 1][col] > dp[row][col - 1]) {
+                sb.append(str1.charAt(row - 1));
+                row--;
+            } else {
+                sb.append(str2.charAt(col - 1));
+                col--;
+            }
+        }
+        while (row > 0) {
+            sb.append(str1.charAt(row - 1));
+            row--;
+        }
+        while (col > 0) {
+            sb.append(str2.charAt(col - 1));
+            col--;
+        }
+        return sb.reverse().toString();
+    }
+}
+
+
+```
 
 ### 2.喪心病狂作法
 
