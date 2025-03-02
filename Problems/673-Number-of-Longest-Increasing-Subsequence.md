@@ -4,7 +4,7 @@
 
 **Notice** that the sequence has to be **strictly** increasing.
 
-**Example 1:**
+**Example 1: **
 
 ```plain text
 Input: nums = [1,3,5,4,7]
