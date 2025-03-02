@@ -1,6 +1,6 @@
 # 673. Number of Longest Increasing Subsequence  
 
-  Methods: DP </br> Difficulty: Medium++ </br> </br>Given an integer array `nums`, return *the number of longest increasing subsequences.*
+  Methods: DP </br> Difficulty: Medium++ </br> Similar: 300 </br> </br>Given an integer array `nums`, return *the number of longest increasing subsequences.*
 
 **Notice** that the sequence has to be **strictly** increasing.
 
