@@ -76,5 +76,55 @@ class Solution {
 }
 ```
 
-最優解
+優化使用Sieve of Eratosthenes
+
+```java
+class Solution {
+    public int[] closestPrimes(int left, int right) {
+        // 考慮[23 29] [29 31]
+
+        // 使用埃拉托色尼篩法標記質數
+        boolean[] isPrime = sieve(right);
+        
+        // 儲存區間內的質數
+        List<Integer> list = new ArrayList<>();
+        for (int i = left; i <= right; i++) {
+            if (isPrime[i]) {
+                list.add(i);
+            }
+        }
+        if(list.size() < 2)
+            return new int[]{-1, -1}; // 如果沒有找到兩個質數
+        
+        int min = Integer.MAX_VALUE, res1 = 0, res2 = 0;
+
+        for(int i = 1; i < list.size(); i++) {
+            int nowMin = list.get(i) - list.get(i - 1);
+            if(nowMin < min) {
+                min = nowMin;
+                res2 = list.get(i);
+                res1 = list.get(i - 1);
+            }
+        } 
+        return new int[]{res1, res2};
+    }
+
+     // 埃拉托色尼篩法
+    private boolean[] sieve(int n) {
+        boolean[] isPrime = new boolean[n + 1];
+        Arrays.fill(isPrime, true);
+        isPrime[0] = isPrime[1] = false; // 0 和 1 不是質數
+
+        for (int i = 2; i * i <= n; i++) {
+            if (isPrime[i]) {
+                for (int j = i * i; j <= n; j += i) {
+                    isPrime[j] = false; // 標記所有 i 的倍數為非質數
+                }
+            }
+        }
+
+        return isPrime;
+    }
+}
+```
 
