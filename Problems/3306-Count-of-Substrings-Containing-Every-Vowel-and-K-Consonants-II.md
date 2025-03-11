@@ -1,6 +1,6 @@
 # 3306. Count of Substrings Containing Every Vowel and K Consonants II  
 
-  Methods: Pointer,Binary Search </br> Difficulty: Medium++ </br> </br>You are given a string `word` and a **non-negative** integer `k`.
+  Methods: Pointer,Binary Search </br> Difficulty: Medium++ </br> Similar: 1358 </br> </br>You are given a string `word` and a **non-negative** integer `k`. 
 
 Return the total number of substrings of `word` that contain every vowel (`'a'`, `'e'`, `'i'`, `'o'`, and `'u'`) **at least** once and **exactly** `k` consonants.
 
@@ -69,7 +69,7 @@ class Solution {
         int[] frequency = new int[6]; // 記錄視窗內的母音與子音數量
         int[] tempFrequency = new int[6]; // 幫助計算有效子字串
         long totalSubstrings = 0; // 儲存符合條件的子字串數量
-
+ 
         // 使用 right 指標遍歷字串
         for (int right = 0; right < word.length(); right++) {
             int vowelIndex = vowels.indexOf(word.charAt(right)) + 1; // 取得字母索引（母音為1~5，子音為0）
