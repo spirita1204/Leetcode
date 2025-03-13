@@ -18,7 +18,7 @@ Return `true` if it is *possible* to transform `nums` into a **Zero Array
 
 **Explanation:**
 
-- **For i = 0:**
+- **For i = 0: **
 **Example 2:**
 
 **Input:** nums = [4,3,2,1], queries = [[1,3],[0,2]]
@@ -36,3 +36,26 @@ Return `true` if it is *possible* to transform `nums` into a **Zero Array
 - `1 <= queries.length <= 105`
 - `queries[i].length == 2`
 - `0 <= li <= ri < nums.length`
+```java
+class Solution {
+    public boolean isZeroArray(int[] nums, int[][] queries) {
+        int[] diff = new int[nums.length + 1];
+        // Difference Array 
+        for(int[] q : queries) {
+            diff[q[0]]--;
+            diff[q[1] + 1]++;
+        }
+        // prefixSum 
+        int e = diff[0];
+        for(int i = 0; i < diff.length - 1; i++) {
+            if(e + nums[i] > 0) 
+                return false;
+            if(i < diff.length - 1) {
+                e += diff[i + 1];
+            }
+        }
+        return true;
+    }
+}
+```
+
