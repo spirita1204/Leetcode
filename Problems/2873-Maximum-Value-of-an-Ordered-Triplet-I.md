@@ -1,6 +1,6 @@
 # 2873. Maximum Value of an Ordered Triplet I  
 
-  Methods: Prefix Sum </br> Difficulty: Easy </br> </br>You are given a **0-indexed** integer array `nums`.
+  Difficulty: Easy </br> Similar: 2874 </br> </br>You are given a **0-indexed** integer array `nums`.
 
 Return ***the maximum value over all triplets of indices*** `(i, j, k)` *such that* `i < j < k`. If all such triplets have a negative value, return `0`.
 
