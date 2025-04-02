@@ -39,6 +39,7 @@ Explanation: The only ordered triplet of indices (0, 1, 2) has a negative value 
 
 - `3 <= nums.length <= 100`
 - `1 <= nums[i] <= 106`
+  
 n3方
 
 ```java
