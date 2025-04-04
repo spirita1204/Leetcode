@@ -41,6 +41,7 @@ Explanation: The deepest node in the tree is 2, the valid subtrees are the subtr
 - The number of nodes in the tree will be in the range `[1, 500]`.
 - `0 <= Node.val <= 500`
 - The values of the nodes in the tree are **unique**.
+  
 **Note:** This question is the same as 1123: [https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
 
 ```java
