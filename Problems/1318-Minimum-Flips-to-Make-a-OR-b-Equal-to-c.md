@@ -1,9 +1,6 @@
-# 1318. Minimum Flips to Make a OR b Equal to c
+# 1318. Minimum Flips to Make a OR b Equal to c  
 
-Methods: Bitewise
-Difficulty: Medium
-
-Medium
+  Methods: Bitwise </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -17,9 +14,9 @@ Flip operation consists of change **any** single bit 1 to 0 or change the bit
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2020/01/06/sample_3_1676.png](https://assets.leetcode.com/uploads/2020/01/06/sample_3_1676.png)
+![Image](https://assets.leetcode.com/uploads/2020/01/06/sample_3_1676.png)
 
-```
+```plain text
 Input: a = 2, b = 6, c = 5
 Output: 3
 Explanation:After flips a = 1 , b = 4 , c = 5 such that (a ORb ==c)
@@ -27,7 +24,7 @@ Explanation:After flips a = 1 , b = 4 , c = 5 such that (a ORb ==c)
 
 **Example 2:**
 
-```
+```plain text
 Input: a = 4, b = 2, c = 7
 Output: 1
 
@@ -35,7 +32,7 @@ Output: 1
 
 **Example 3:**
 
-```
+```plain text
 Input: a = 1, b = 2, c = 3
 Output: 0
 
@@ -46,7 +43,6 @@ Output: 0
 - `1 <= a <= 10^9`
 - `1 <= b <= 10^9`
 - `1 <= c <= 10^9`
-
 ```java
 class Solution {
     public int minFlips(int a, int b, int c) {
@@ -68,3 +64,4 @@ class Solution {
     }
 }
 ```
+
