@@ -1,15 +1,12 @@
-# 2425. Bitwise XOR of All Pairings
+# 2425. Bitwise XOR of All Pairings  
 
-Methods: Bitewise
-Difficulty: Medium
+  Methods: Bitwise </br> Difficulty: Medium </br> </br>You are given two **0-indexed** arrays, `nums1` and `nums2`, consisting of non-negative integers. There exists another array, `nums3`, which contains the bitwise XOR of **all pairings** of integers between `nums1` and `nums2` (every integer in `nums1` is paired with every integer in `nums2` **exactly once**).
 
-You are given two **0-indexed** arrays, `nums1` and `nums2`, consisting of non-negative integers. There exists another array, `nums3`, which contains the bitwise XOR of **all pairings** of integers between `nums1` and `nums2` (every integer in `nums1` is paired with every integer in `nums2` **exactly once**).
-
-Return *the **bitwise XOR** of all integers in* `nums3`.
+Return* the ****bitwise XOR**** of all integers in *`nums3`.
 
 **Example 1:**
 
-```
+```plain text
 Input: nums1 = [2,1,3], nums2 = [10,2,5,0]
 Output: 13
 Explanation:
@@ -20,7 +17,7 @@ The bitwise XOR of all these numbers is 13, so we return 13.
 
 **Example 2:**
 
-```
+```plain text
 Input: nums1 = [1,2], nums2 = [3,4]
 Output: 0
 Explanation:
@@ -35,7 +32,6 @@ Thus, one possible nums3 array is [2,5,1,6].
 
 - `1 <= nums1.length, nums2.length <= 105`
 - `0 <= nums1[i], nums2[j] <= 109`
-
 ```java
 class Solution {
     public int xorAllNums(int[] nums1, int[] nums2) {
@@ -73,3 +69,4 @@ class Solution {
     }
 }
 ```
+
