@@ -1,6 +1,6 @@
 # 3108. Minimum Cost Walk in Weighted Graph  
 
-  Methods: Bitewise </br> Data Structure: Union Find </br> Difficulty: Hard </br> </br>There is an undirected weighted graph with `n` vertices labeled from `0` to `n - 1`.
+  Methods: Bitwise </br> Data Structure: Union Find </br> Difficulty: Hard </br> </br>There is an undirected weighted graph with `n` vertices labeled from `0` to `n - 1`.
 
 You are given the integer `n` and an array `edges`, where `edges[i] = [ui, vi, wi]` indicates that there is an edge between vertices `ui` and `vi` with a weight of `wi`.
 
