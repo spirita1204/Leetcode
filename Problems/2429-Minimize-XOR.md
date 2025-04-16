@@ -1,22 +1,18 @@
-# 2429. Minimize XOR
+# 2429. Minimize XOR  
 
-Methods: Bitewise
-Difficulty: Medium
-
-Given two positive integers `num1` and `num2`, find the positive integer `x` such that:
+  Methods: Bitwise </br> Difficulty: Medium </br> </br>Given two positive integers `num1` and `num2`, find the positive integer `x` such that:
 
 - `x` has the same number of set bits as `num2`, and
 - The value `x XOR num1` is **minimal**.
-
 Note that `XOR` is the bitwise XOR operation.
 
-Return *the integer* `x`. The test cases are generated such that `x` is **uniquely determined**.
+Return *the integer *`x`. The test cases are generated such that `x` is **uniquely determined**.
 
 The number of **set bits** of an integer is the number of `1`'s in its binary representation.
 
 **Example 1:**
 
-```
+```plain text
 Input: num1 = 3, num2 = 5
 Output: 3
 Explanation:
@@ -27,7 +23,7 @@ The integer3 has the same number of set bits as num2, and the value3 XOR 3 = 0 i
 
 **Example 2:**
 
-```
+```plain text
 Input: num1 = 1, num2 = 12
 Output: 3
 Explanation:
@@ -39,7 +35,6 @@ The integer3 has the same number of set bits as num2, and the value3 XOR 1 = 2 i
 **Constraints:**
 
 - `1 <= num1, num2 <= 109`
-
 ```java
 class Solution {
     public int minimizeXor(int num1, int num2) {
@@ -68,3 +63,4 @@ class Solution {
     }
 }
 ```
+
