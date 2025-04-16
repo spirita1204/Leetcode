@@ -1,9 +1,6 @@
-# 201. Bitwise AND of Numbers Range
+# 201. Bitwise AND of Numbers Range  
 
-Methods: Bitewise
-Difficulty: Medium
-
-**Medium**
+  Methods: Bitwise </br> Difficulty: Medium </br> </br>**Medium**
 
 2.8K
 
@@ -15,7 +12,7 @@ Given two integers `left` and `right` that represent the range `[left, righ
 
 **Example 1:**
 
-```
+```plain text
 Input: left = 5, right = 7
 Output: 4
 
@@ -23,7 +20,7 @@ Output: 4
 
 **Example 2:**
 
-```
+```plain text
 Input: left = 0, right = 0
 Output: 0
 
@@ -31,7 +28,7 @@ Output: 0
 
 **Example 3:**
 
-```
+```plain text
 Input: left = 1, right = 2147483647
 Output: 0
 
@@ -40,7 +37,6 @@ Output: 0
 **Constraints:**
 
 - `0 <= left <= right <= 231 - 1`
-
 ```java
 class Solution {
     public int rangeBitwiseAnd(int left, int right) {
@@ -54,3 +50,4 @@ class Solution {
     }
 }
 ```
+
