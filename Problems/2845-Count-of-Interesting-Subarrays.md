@@ -1,6 +1,6 @@
 # 2845. Count of Interesting Subarrays  
 
-  Methods: Prefix Sum </br> Difficulty: Medium </br> </br>You are given a **0-indexed** integer array `nums`, an integer `modulo`, and an integer `k`.
+  Methods: Prefix Sum </br> Data Structure: Hash Table </br> Difficulty: Medium </br> </br>You are given a **0-indexed** integer array `nums`, an integer `modulo`, and an integer `k`.
 
 Your task is to find the count of subarrays that are **interesting**.
 
@@ -79,10 +79,38 @@ class Solution {
             
         return res;
     }
-}
+} 
 ```
 
 ---
 
+**Prefix Sum**
 
+```java
+class Solution {
+    public long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {
+        // [3,1,9,6]  modulo = 3, k = 0
+        // [1,0,1,1] mod
+        // [0 1 1 2 3] prefix
+        int n = nums.size();
+        long res = 0;
+        Map<Integer, Integer> hm = new HashMap<>();
+        int prefix = 0;
+        
+        hm.put(0, 1); 
+        for (int num : nums) {
+            // 更新prefix
+            if (num % modulo == k) 
+                prefix++;
+            
+            int need = (prefix - k) % modulo;
+            res += hm.getOrDefault(need, 0);
+            
+            int key = prefix % modulo;
+            hm.put(key, hm.getOrDefault(key, 0) + 1);
+        }
+        return res;
+    }
+}
+```
 
