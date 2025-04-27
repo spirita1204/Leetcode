@@ -1,6 +1,6 @@
 # 3392. Count Subarrays of Length Three With a Condition  
 
-  Methods: Basic logic </br> Difficulty: Medium </br> </br>Given an integer array `nums`, return the number of subarrays of length 3 such that the sum of the first and third numbers equals *exactly* half of the second number.
+  Methods: Basic logic </br> Difficulty: Easy </br> </br>Given an integer array `nums`, return the number of subarrays of length 3 such that the sum of the first and third numbers equals *exactly* half of the second number.
 
 **Example 1:**
 
