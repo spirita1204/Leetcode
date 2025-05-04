@@ -1,6 +1,6 @@
 # 838. Push Dominoes  
 
-  Methods: Pointer </br> </br>There are `n` dominoes in a line, and we place each domino vertically upright. In the beginning, we simultaneously push some of the dominoes either to the left or to the right.
+  Methods: Pointer </br> Difficulty: Medium </br> </br>There are `n` dominoes in a line, and we place each domino vertically upright. In the beginning, we simultaneously push some of the dominoes either to the left or to the right.
 
 After each second, each domino that is falling to the left pushes the adjacent domino on the left. Similarly, the dominoes falling to the right push their adjacent dominoes standing on the right.
 
