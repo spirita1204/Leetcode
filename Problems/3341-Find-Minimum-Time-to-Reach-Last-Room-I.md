@@ -1,6 +1,6 @@
 # 3341. Find Minimum Time to Reach Last Room I  
 
-  Methods: Dijkstra,Shortest Path </br> Data Structure: Heap </br> Difficulty: Medium </br> </br>There is a dungeon with `n x m` rooms arranged as a grid.
+  Methods: Dijkstra,Shortest Path </br> Data Structure: Heap </br> Difficulty: Medium </br> Similar: 3342 </br> </br>There is a dungeon with `n x m` rooms arranged as a grid.  
 
 You are given a 2D array `moveTime` of size `n x m`, where `moveTime[i][j]` represents the **minimum** time in seconds when you can **start moving** to that room. You start from the room `(0, 0)` at time `t = 0` and can move to an **adjacent** room. Moving between adjacent rooms takes *exactly* one second.
 
@@ -22,6 +22,8 @@ The minimum time required is 6 seconds.
 
 - At time `t == 4`, move from room `(0, 0)` to room `(1, 0)` in one second.
 - At time `t == 5`, move from room `(1, 0)` to room `(1, 1)` in one second.
+---
+
 **Example 2:**
 
 **Input:** moveTime = [[0,0,0],[0,0,0]]
@@ -35,6 +37,8 @@ The minimum time required is 3 seconds.
 - At time `t == 0`, move from room `(0, 0)` to room `(1, 0)` in one second.
 - At time `t == 1`, move from room `(1, 0)` to room `(1, 1)` in one second.
 - At time `t == 2`, move from room `(1, 1)` to room `(1, 2)` in one second.
+---
+
 **Example 3:**
 
 **Input:** moveTime = [[0,1],[1,2]]
