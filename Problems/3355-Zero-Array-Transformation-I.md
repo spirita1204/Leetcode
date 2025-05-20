@@ -10,6 +10,8 @@ A **Zero Array** is an array where all elements are equal to 0.
 
 Return `true` if it is *possible* to transform `nums` into a **Zero Array **after processing all the queries sequentially, otherwise return `false`.
 
+---
+
 **Example 1:**
 
 **Input:** nums = [1,0,1], queries = [[0,2]]
@@ -19,6 +21,8 @@ Return `true` if it is *possible* to transform `nums` into a **Zero Array
 **Explanation:**
 
 - **For i = 0: **
+---
+
 **Example 2:**
 
 **Input:** nums = [4,3,2,1], queries = [[1,3],[0,2]]
@@ -29,6 +33,8 @@ Return `true` if it is *possible* to transform `nums` into a **Zero Array
 
 - **For i = 0:**
 - **For i = 1:**
+---
+
 **Constraints:**
 
 - `1 <= nums.length <= 105`
@@ -50,9 +56,7 @@ class Solution {
         for(int i = 0; i < diff.length - 1; i++) {
             if(e + nums[i] > 0) 
                 return false;
-            if(i < diff.length - 1) {
-                e += diff[i + 1];
-            }
+            e += diff[i + 1];
         }
         return true;
     }
