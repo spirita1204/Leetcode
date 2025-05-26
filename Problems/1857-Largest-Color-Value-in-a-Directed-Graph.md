@@ -1,50 +1,31 @@
-# 1857. Largest Color Value in a Directed Graph
+# 1857. Largest Color Value in a Directed Graph  
 
-Data structure: Graph
-Difficulty: Hard
-
-[https://www.youtube.com/watch?v=VH1UevGQ4KQ&t=10s](https://www.youtube.com/watch?v=VH1UevGQ4KQ&t=10s)
-
-[Topological Sort – 陪你刷題](https://haogroot.com/2020/12/13/topological-sort-leetcode/)
-
-**1857. Largest Color Value in a Directed Graph**
-
-**Hard**
-
-1.3K
-
-45
-
-Companies
-
-There is a **directed graph** of `n` colored nodes and `m` edges. The nodes are numbered from `0` to `n - 1`.
+  Data Structure: Graph </br> Difficulty: Hard </br> </br>There is a **directed graph** of `n` colored nodes and `m` edges. The nodes are numbered from `0` to `n - 1`.
 
 You are given a string `colors` where `colors[i]` is a lowercase English letter representing the **color** of the `ith` node in this graph (**0-indexed**). You are also given a 2D array `edges` where `edges[j] = [aj, bj]` indicates that there is a **directed edge** from node `aj` to node `bj`.
 
 A valid **path** in the graph is a sequence of nodes `x1 -> x2 -> x3 -> ... -> xk` such that there is a directed edge from `xi` to `xi+1` for every `1 <= i < k`. The **color value** of the path is the number of nodes that are colored the **most frequently** occurring color along that path.
 
-Return *the **largest color value** of any valid path in the given graph, or* `-1` *if the graph contains a cycle*.
+Return *the ****largest color value**** of any valid path in the given graph, or *`-1`* if the graph contains a cycle*.
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2021/04/21/leet1.png](https://assets.leetcode.com/uploads/2021/04/21/leet1.png)
+![Image](https://assets.leetcode.com/uploads/2021/04/21/leet1.png)
 
-```
+```plain text
 Input: colors = "abaca", edges = [[0,1],[0,2],[2,3],[3,4]]
 Output: 3
 Explanation: The path 0 -> 2 -> 3 -> 4 contains 3 nodes that are colored"a" (red in the above image).
-
 ```
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2021/04/21/leet2.png](https://assets.leetcode.com/uploads/2021/04/21/leet2.png)
+![Image](https://assets.leetcode.com/uploads/2021/04/21/leet2.png)
 
-```
+```plain text
 Input: colors = "a", edges = [[0,0]]
 Output: -1
 Explanation: There is a cycle from 0 to 0.
-
 ```
 
 **Constraints:**
@@ -55,24 +36,19 @@ Explanation: There is a cycle from 0 to 0.
 - `0 <= m <= 105`
 - `colors` consists of lowercase English letters.
 - `0 <= aj, bj < n`
-
 觀念 拆解成26子等分去思考 找單鏈 該顏色最多 > 最後在取26個中最大
 
-![Untitled](Untitled%2013.png)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/81bfe8e8-c2fe-4d29-8949-0ba3cf293f0f/1d06e5b4-aef7-4039-9d1e-324b0aa4cfcd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663R3B637Y%2F20250526%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250526T155922Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEID%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCsjTrN9Pmh1O%2Bzw7zenCnz5RC%2BZXbVVu2SxNg3loOOOgIhAJxKreCahN5HDkR0SqnLrqtNe9ijy1Xzbzno8y21uUULKv8DCEkQABoMNjM3NDIzMTgzODA1IgzkdC72grsEZnSVZncq3APkwnIwVa6YgHrHzSicvuMisOMgEoauQm2h6Kd7LYeVsBg6%2Bx%2FB%2BMvUEvOSe7ilWcLGqCeW87b8wioAYTUoSLjANgHE2N36aUDj02%2Bcy8pKvx3K0uI2deJtNDkmgvx5eDPxCS0XrkPqXeB5NYkscbcuU%2BscriDfhL8%2BcQB5o6y3xiXyzUrhZsmFDFnR3TpkWeSRBs6n1VsrSi70Mub0QN%2BO0s4decFVGPNQ0KQNIWvOz0kHTHxL78oNnrPuUBTWMJqsBzXhu%2Fv0D04vu96vnOGhgLP7EqGZrwexzW2XXh1bmPE7am4JDsJnMZ9HYOmuaEjHxophrFAdunhRHEd0sij5E79llJ7PEwDJF5JH7RMkqANbQ8GVMKV7V2d7dIcjkIQmuzBwoUqEAHB21V0VfzjWzW5ZfefwERu9DHkyeMnWwWX5QMpu6G7ufRFvyCEDEzu3XedmwO1FHJc%2BCwGakSEMJE6F6o1rB5NwtJFbjuEw%2BDvXKJd8NkvRj9ZE1DjvJ6vQ8r1hP5%2FKZPmjpxqbVkwtdDL6BWnGJOqtf9F%2Bl0pv%2FuWKuPH0BTFSF%2BhN1tacR43jmm2fmcFNzuCTIoe%2Bn2NhKuAIFgeyjywh%2FP0O1NEnM49YLlk39kpEtzwxGTCEk9LBBjqkAXZdNPoqc5RQ47ls%2FuChYvD6xD1Vhc3LIR%2BBaUSPXvW%2BTZT2Jv8CLr9q3Gn5pOa0Lslj%2Fqco75M13E9uEF9K5zdRwC4LBP895twSqoS%2FN3%2BJbqxMOmIqvIzchzx4fa3lqfwfy2dJMMHAQVXPB3R1224gKSXO7NIIx0vzLXiXP1vULYoJCjUqRlQV%2FPdtmmQAX38hx88r96mM%2BbWs%2BCbu86CCXg9Y&X-Amz-Signature=9a25450cc6f5f5c843da1dee1287e4858bbfc9ba262c6da705ab288ca0aaa5cf&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 # **Topological Sort - Kahn's algorithm**
 
 透過 topological sort 檢查圖中是否存在 cycle ，其步驟為：
 
 1. 計算所有點的 in-degree (進入該點的邊數量）。
-2. 將 in-degree 為 0 的點放入 queue 。
-3. 從 queue 中拿出頂點，並執行以下步驟
-    1. 利用一個變數紀錄 dequeue 的節點數，每拿出一個點，就將變數加 1
-    2. 將該頂點的鄰節點 in-degree 減 1 ，因為接往他的節點要被移除掉了
-    3. 如果有鄰節點的 in-degree 已經歸零，將他放入 queue
-4. 重複步驟 3 直到 queue 為空。
-5. 檢查 dequeue 的數量是否等於節點總數 （如果存在 cycle 的話，cycle 路徑上的節點 in-degree 是永遠都無法歸零的）
-
+1. 將 in-degree 為 0 的點放入 queue 。
+1. 從 queue 中拿出頂點，並執行以下步驟
+1. 重複步驟 3 直到 queue 為空。
+1. 檢查 dequeue 的數量是否等於節點總數 （如果存在 cycle 的話，cycle 路徑上的節點 in-degree 是永遠都無法歸零的）
 ```java
 class Solution {
     public int largestPathValue(String colors, int[][] edges) {
@@ -134,3 +110,4 @@ class Solution {
     }
 }
 ```
+
