@@ -65,9 +65,12 @@ There is no `'*'` in the string.
 ```java
 class Solution {
     public String clearStars(String s) {
+			  // 如果兩個字符相等，則優先返回較大的索引（這樣較晚出現的字符會被優先處理）。
+				// 如果兩個字符不同，則按照字符的字典序來排序。
         Queue<Integer> pq = new PriorityQueue<>(
                 (a, b) -> s.charAt(a) == s.charAt(b) ? b - a : s.charAt(a) - s.charAt(b));
         StringBuilder sb = new StringBuilder();
+        // 用來存儲需要刪除的索引。當遇到星號 (*) 時，這些索引將會被標記為 "刪除"。
         Set<Integer> hs = new HashSet<>();
 
         for (int i = 0; i < s.length(); i++) {
@@ -87,5 +90,5 @@ class Solution {
 }
 ```
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/81bfe8e8-c2fe-4d29-8949-0ba3cf293f0f/257c3c94-b229-4eaa-872c-b2d6343910d8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QEWTG3C6%2F20250607%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250607T034512Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIE0alzdQKNbCyedXVFz6HmbVpj50DBDIYzSl%2Fg6PBpHEAiAkYkSoZp2TOP%2Bf6cN2TlWcBUzWCwv0cHqGrvgOR%2Fbn7ir%2FAwhrEAAaDDYzNzQyMzE4MzgwNSIMMoXqc9TU8nDAX%2FaKKtwDK%2FEC%2FIl%2FYAn1Tn4pqIO7CSMYkeVB7D22uc773GjOBQq0klqfZKXjoBFDHP8DnP0pvmJ%2BxT43erJpa%2B8xMsx1VeX6xYQgRlHKR2nYLiKo6K2zUp9xR9hqC06JbGF%2B5pEA98lA%2FX%2B%2BO%2BHCFI49iNaK8Hls8m2HqUF2N8KvTQoVS3t19EkLj1tXnKMS9FG7yX7FjX07XFW6Z5JxsD87h%2BPKVzi5KdJM6jXKhv%2B5%2FCNiA5LfqMRMzcPcqmyjRInlzk%2FyNfFJC22ExSxldUAjgbD81Pu2vO1ocdKtMJy6sVyL9B8ZrazMvx5G5I0Ws9kfbG9OwwHIuEarQ6SdqBsIPLxYG8bb96t4tYFHbOS20uwnjUXs7yqSTV8YBJ8NULJ9MhEiOeAvgQwX0QYM5m%2FXaDLmHsMxXgp%2FBnrxwKxCCjyLYWufDMVLIf0ty59UyZrfBPGo6r8LSceFKc7GK263o8BjdKBIn6uC9PD8651zqWXUb2PzxAiUZJu4jPSPs9Eh83YjSYTJM%2F78Tx8raa5lzebDLcxUICiov3hDJpomewk1tbHCpZGNyXrkYWDXJvM%2Fi9HeMuB%2BE5%2FQtLU3w2GfKqZFlJ4lDQWffINUvd8wEPCFv5EtmBW3shx0jiIoXfww%2B8COwgY6pgEzw7CH8rislL8KUPw8J%2F%2FDLe8MqaExOIaq2erdkWz2KeHJs6LG9HIAkZxOmNhlM7%2FfIn265Qu1F0OwU%2BO203TPiYe4EygLf63Emk3VRCkhyskOamt7so7nK2crraXfPItsHUFmtSUEMCTETPvWe9bjmwcFr9nSklvEydAwZmWPxZrAq1sBLceu999XSwKj%2FV3DAVzzrEyN00KTlgVzu0T7YEwT5Nng&X-Amz-Signature=61ff3514a898a7f4c9aafc44c1d81067370f8bacf29b7622345eaf151e4a44f5&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/81bfe8e8-c2fe-4d29-8949-0ba3cf293f0f/257c3c94-b229-4eaa-872c-b2d6343910d8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466Q4K3VFZ6%2F20250607%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250607T035043Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDBXsQL0XWdG9T3CiiPfABLMmmaeHdoLAjaxZotFxz1xgIhAJE1Cd9zfqg0L7%2FykZiHDEzW4l0sq0QbmYTDOnxenmZ4Kv8DCGsQABoMNjM3NDIzMTgzODA1IgxLxSoKujB6ZjO4i%2Foq3APL9nzSnn4dmuWEBTEd%2BzpquC%2FedL4BTy67kAySg%2BWyduozxZx72eDcruXc8xsvIo0CHBONsBeDn2M%2BDXunUEMkJuzXIPwLMuD59FRXSv192d50MZyWmz6HPqUD6DFX3NaGdEPqKhv0tD6ChgiWhd4o8wCJWwNvOnxu4d5e1O8VXBNJ45lw3Fu9pHonHfk1TDR6wEMyHVe6aopCLLBRiAX8uOjN5%2FRWK%2FK24UvQmPJQ8m7vkzSHnRX8iq720uk0SOb98qw7%2BlCZItzwD%2Bv0obzBpjpKv3BXCuUk%2BHDgybFedpXW1htuk9CUE7DHJCPG%2FYwz0lHrbWJ5WSTpu2rTgl0m9KEEnZZWxF1xPizjToE6c0gVpr6fsS6%2BQemAKbXxecLUGTDW6UY7q7k6spxk8d30fka0%2FBBKQ0LOdRjmdv3b8lpC1TCn8KPL8Lsw0Q3RSh1eVDuP3dYF7B3NT%2FmEQmXeQeP0JlC1y2uYaPDBOH6As0wuIVblXgDfgak26H0Kxj3n7poskCcFEZCutle8rHS8IzQeHkMUG%2Bn0udGLoee2Nh6NgUhg2urFBZ434gP51FpzFeOWQTHQWaYfm9%2BqkqBwi7B5qUVb9m85Sp8Mic4TjaAhWVOFSLERePBr5DDFwI7CBjqkAcBdJTP35Zl0CbU6bdo5TWZSMk9Wj%2F9uQjRZ3Aq2UyMdQbGVR%2FOjLPaOLLU73iaHWw%2BdLb7Kf%2Fp6%2FdyrG%2F%2FTNQBnIZ%2FRkhsqnlh%2BCGnoFpk9D%2BZxKpqpbg8zf8ZLVSMECQsnalkqxBQCdr1LUJ2%2Bb7VuivHSl0s9FGCJitz3QedH7M42o2K3vFINEOziTE3syUI5rjKxcbTd1zmtfpvc5O9pTa%2Fg&X-Amz-Signature=8bc878b4c289b28441622d4bb879c11e60a6988873d5fda8e7acbfe8511754b6&X-Amz-SignedHeaders=host&x-id=GetObject)
 
