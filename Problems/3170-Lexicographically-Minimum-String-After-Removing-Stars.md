@@ -1,6 +1,6 @@
 # 3170. Lexicographically Minimum String After Removing Stars  
 
-  Data Structure: Heap </br> Difficulty: Medium </br> </br>You are given a string `s`. It may contain any number of `'*'` characters. Your task is to remove all `'*'` characters.
+  Data Structure: Heap,Set </br> Difficulty: Medium </br> </br>You are given a string `s`. It may contain any number of `'*'` characters. Your task is to remove all `'*'` characters.
 
 While there is a `'*'`, do the following operation:
 
