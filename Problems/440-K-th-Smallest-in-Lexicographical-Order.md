@@ -1,31 +1,25 @@
-# 440. K-th Smallest in Lexicographical Order
+# 440. K-th Smallest in Lexicographical Order  
 
-Data structure: Trie
-Difficulty: Hard
-
-Given two integers `n` and `k`, return *the* `kth` *lexicographically smallest integer in the range* `[1, n]`.
+  Data Structure: Trie </br> Difficulty: Hard </br> </br>Given two integers `n` and `k`, return *the* `kth` *lexicographically smallest integer in the range* `[1, n]`.
 
 **Example 1:**
 
-```
+```plain text
 Input: n = 13, k = 2
 Output: 10
 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.
-
 ```
 
 **Example 2:**
 
-```
+```plain text
 Input: n = 1, k = 1
 Output: 1
-
 ```
 
 **Constraints:**
 
 - `1 <= k <= n <= 109`
-
 ```java
 class Solution {
     public int findKthNumber(int n, int k) {
@@ -58,3 +52,4 @@ class Solution {
     }
 }
 ```
+
