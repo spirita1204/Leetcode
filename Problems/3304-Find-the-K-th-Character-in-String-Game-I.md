@@ -1,6 +1,6 @@
 # 3304. Find the K-th Character in String Game I  
 
-  Methods: Bitwise </br> Similar: 538 </br> </br>Alice and Bob are playing a game. Initially, Alice has a string `word = "a"`.
+  Methods: Bitwise </br> Difficulty: Easy </br> </br>Alice and Bob are playing a game. Initially, Alice has a string `word = "a"`.
 
 You are given a **positive** integer `k`.
 
