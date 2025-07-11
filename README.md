@@ -1,4 +1,5 @@
-![LeetCode Total](https://img.shields.io/badge/LeetCode%20Solved-981-red) ![Easy](https://img.shields.io/badge/Easy-313-green) ![Medium](https://img.shields.io/badge/Medium-574-yellow) ![Hard](https://img.shields.io/badge/Hard-94-blue) ![Acceptance Rate](https://img.shields.io/badge/Acceptance%20Rate-63.94%25-lightgrey) ![Ranking](https://img.shields.io/badge/Ranking-23469-purple)
+![LeetCode Total](https://img.shields.io/badge/LeetCode%20Solved-982-red) ![Easy](https://img.shields.io/badge/Easy-313-green) ![Medium](https://img.shields.io/badge/Medium-575-yellow) ![Hard](https://img.shields.io/badge/Hard-94-blue) ![Acceptance Rate](https://img.shields.io/badge/Acceptance%20Rate-63.96%25-lightgrey) ![Ranking](https://img.shields.io/badge/Ranking-23423-purple)
+
 
 
 
