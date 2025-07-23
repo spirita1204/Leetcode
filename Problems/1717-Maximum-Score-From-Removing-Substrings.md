@@ -1,29 +1,14 @@
-# 1717. Maximum Score From Removing Substrings
+# 1717. Maximum Score From Removing Substrings  
 
-Methods: Greedy
-Data structure: Stack
-Difficulty: Medium
-
-Medium
-
-Topics
-
-Companies
-
-Hint
-
-You are given a string `s` and two integers `x` and `y`. You can perform two types of operations any number of times.
+  Methods: Greedy </br> Data Structure: Stack </br> Difficulty: Medium </br> </br>You are given a string `s` and two integers `x` and `y`. You can perform two types of operations any number of times.
 
 - Remove substring `"ab"` and gain `x` points.
-    - For example, when removing `"ab"` from `"cabxbae"` it becomes `"cxbae"`.
 - Remove substring `"ba"` and gain `y` points.
-    - For example, when removing `"ba"` from `"cabxbae"` it becomes `"cabxe"`.
-
 Return *the maximum points you can gain after applying the above operations on* `s`.
 
 **Example 1:**
 
-```
+```plain text
 Input: s = "cdbcbbaaabab", x = 4, y = 5
 Output: 19
 Explanation:
@@ -36,10 +21,9 @@ Total score = 5 + 4 + 5 + 5 = 19.
 
 **Example 2:**
 
-```
+```plain text
 Input: s = "aabbaaxybbaabb", x = 5, y = 4
 Output: 20
-
 ```
 
 **Constraints:**
@@ -47,7 +31,6 @@ Output: 20
 - `1 <= s.length <= 105`
 - `1 <= x, y <= 104`
 - `s` consists of lowercase English letters.
-
 ```java
 class Solution {
     public int maximumGain(String s, int x, int y) {
@@ -95,3 +78,4 @@ class Solution {
     //  ____   __ x+2y=4074+19638=23712
 }
 ```
+
