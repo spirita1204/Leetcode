@@ -1,6 +1,7 @@
 ![LeetCode Total](https://img.shields.io/badge/LeetCode%20Solved-998-red) ![Easy](https://img.shields.io/badge/Easy-317-green) ![Medium](https://img.shields.io/badge/Medium-581-yellow) ![Hard](https://img.shields.io/badge/Hard-100-blue) ![Acceptance Rate](https://img.shields.io/badge/Acceptance%20Rate-64.19%25-lightgrey) ![Ranking](https://img.shields.io/badge/Ranking-22657-purple)
 
 
+
 ## LeetCode Statistics
 <img src="https://leetcard.jacoblin.cool/spirita1204?theme=dark&font=Short%20Stack&ext=heatmap" alt="My LeetCode statistics" />
 
