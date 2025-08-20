@@ -1,21 +1,10 @@
-# 1277. Count Square Submatrices with All Ones
+# 1277. Count Square Submatrices with All Ones  
 
-Methods: DP
-Difficulty: Medium
-
-Medium
-
-Topics
-
-Companies
-
-Hint
-
-Given a `m * n` matrix of ones and zeros, return how many **square** submatrices have all ones.
+  Methods: DP </br> Difficulty: Medium </br> </br>Given a `m * n` matrix of ones and zeros, return how many **square** submatrices have all ones.
 
 **Example 1:**
 
-```
+```plain text
 Input: matrix =
 [
   [0,1,1,1],
@@ -28,12 +17,11 @@ There are10 squares of side 1.
 There are4 squares of side 2.
 There is1 square of side 3.
 Total number of squares = 10 + 4 + 1 =15.
-
 ```
 
 **Example 2:**
 
-```
+```plain text
 Input: matrix =
 [
   [1,0,1],
@@ -45,7 +33,6 @@ Explanation:
 There are6 squares of side 1.
 There is1 square of side 2.
 Total number of squares = 6 + 1 =7.
-
 ```
 
 **Constraints:**
@@ -53,7 +40,6 @@ Total number of squares = 6 + 1 =7.
 - `1 <= arr.length <= 300`
 - `1 <= arr[0].length <= 300`
 - `0 <= arr[i][j] <= 1`
-
 ```java
 class Solution {
     public int countSquares(int[][] matrix) {
@@ -85,3 +71,4 @@ class Solution {
     }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 }
 ```
+
