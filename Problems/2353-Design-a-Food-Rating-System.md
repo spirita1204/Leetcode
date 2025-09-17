@@ -1,35 +1,19 @@
-# 2353. Design a Food Rating System
+# 2353. Design a Food Rating System  
 
-Data structure: Hash Table
-Difficulty: Medium
-
-Medium
-
-Topics
-
-Companies
-
-Hint
-
-Design a food rating system that can do the following:
+  Data Structure: Hash Table </br> Difficulty: Medium </br> </br>Design a food rating system that can do the following:
 
 - **Modify** the rating of a food item listed in the system.
 - Return the highest-rated food item for a type of cuisine in the system.
-
 Implement the `FoodRatings` class:
 
 - `FoodRatings(String[] foods, String[] cuisines, int[] ratings)` Initializes the system. The food items are described by `foods`, `cuisines` and `ratings`, all of which have a length of `n`.
-    - `foods[i]` is the name of the `ith` food,
-    - `cuisines[i]` is the type of cuisine of the `ith` food, and
-    - `ratings[i]` is the initial rating of the `ith` food.
 - `void changeRating(String food, int newRating)` Changes the rating of the food item with the name `food`.
 - `String highestRated(String cuisine)` Returns the name of the food item that has the highest rating for the given type of `cuisine`. If there is a tie, return the item with the **lexicographically smaller** name.
-
 Note that a string `x` is lexicographically smaller than string `y` if `x` comes before `y` in dictionary order, that is, either `x` is a prefix of `y`, or if `i` is the first position such that `x[i] != y[i]`, then `x[i]` comes before `y[i]` in alphabetic order.
 
 **Example 1:**
 
-```
+```plain text
 Input
 ["FoodRatings", "highestRated", "highestRated", "changeRating", "highestRated", "changeRating", "highestRated"]
 [[["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"], ["korean", "japanese", "japanese", "greek", "japanese", "korean"], [9, 12, 8, 15, 14, 7]], ["korean"], ["japanese"], ["sushi", 16], ["japanese"], ["ramen", 16], ["japanese"]]
@@ -49,7 +33,6 @@ foodRatings.changeRating("ramen", 16); // "ramen" now has a rating of 16.
 foodRatings.highestRated("japanese"); // return "ramen"
                                       // Both "sushi" and "ramen" have a rating of 16.
                                       // However, "ramen" is lexicographically smaller than "sushi".
-
 ```
 
 **Constraints:**
@@ -63,7 +46,6 @@ foodRatings.highestRated("japanese"); // return "ramen"
 - `food` will be the name of a food item in the system across all calls to `changeRating`.
 - `cuisine` will be a type of cuisine of **at least one** food item in the system across all calls to `highestRated`.
 - At most `2 * 104` calls **in total** will be made to `changeRating` and `highestRated`.
-
 ```java
 class FoodRatings {
     HashMap<String, PriorityQueue<Food>> hm = new HashMap<>(); // get pq from cuisine name
@@ -118,3 +100,4 @@ class Food{
  * String param_2 = obj.highestRated(cuisine);
  */
 ```
+
