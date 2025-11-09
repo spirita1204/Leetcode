@@ -36,7 +36,6 @@ Explanation: The component containing vertices 0, 1, and 2 is complete since the
 - `0 <= ai, bi <= n - 1`
 - `ai != bi`
 - There are no repeated edges.
-  
 Hint 1
 
 Find the connected components of an undirected graph using depth-first search (DFS) or breadth-first search (BFS).
