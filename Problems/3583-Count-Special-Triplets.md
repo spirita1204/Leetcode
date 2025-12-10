@@ -4,7 +4,7 @@
 
 A **special triplet** is defined as a triplet of indices `(i, j, k)` such that:
 
-- `0 <= i < j < k < n`, where `n = nums.length`  
+- `0 <= i < j < k < n`, where `n = nums.length`
 - `nums[i] == nums[j] * 2`
 - `nums[k] == nums[j] * 2`
 Return the total number of **special triplets** in the array.
@@ -49,15 +49,14 @@ There are exactly two special triplets:
 
 - `(i, j, k) = (0, 1, 3)`
 - `(i, j, k) = (1, 2, 4)`
-**Constraints: **
+**Constraints:**
 
-- `3 <= n == nums.length <= 105`   
+- `3 <= n == nums.length <= 105`
 - `0 <= nums[i] <= 105`
----
-
 ```java
 class Solution {
     final static int mod = (int) 1e9 + 7, M = (int) 1e5 + 1;
+
     public int specialTriplets(int[] nums) {
         // 對於每個 j：
         // 左邊有多少個 2x  
@@ -82,4 +81,6 @@ class Solution {
     }
 }
 ```
+
+
 
