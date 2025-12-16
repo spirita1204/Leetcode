@@ -1,9 +1,6 @@
-# 143. Reorder List
+# 143. Reorder List  
 
-Methods: Basic logic
-Difficulty: Medium
-
-Medium
+  Methods: Basic logic </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -11,13 +8,13 @@ Companies
 
 You are given the head of a singly linked-list. The list can be represented as:
 
-```
+```plain text
 L0 → L1 → … → Ln - 1 → Ln
 ```
 
 *Reorder the list to be on the following form:*
 
-```
+```plain text
 L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 
 ```
@@ -26,9 +23,9 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2021/03/04/reorder1linked-list.jpg](https://assets.leetcode.com/uploads/2021/03/04/reorder1linked-list.jpg)
+![Image](https://assets.leetcode.com/uploads/2021/03/04/reorder1linked-list.jpg)
 
-```
+```plain text
 Input: head = [1,2,3,4]
 Output: [1,4,2,3]
 
@@ -36,9 +33,9 @@ Output: [1,4,2,3]
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2021/03/09/reorder2-linked-list.jpg](https://assets.leetcode.com/uploads/2021/03/09/reorder2-linked-list.jpg)
+![Image](https://assets.leetcode.com/uploads/2021/03/09/reorder2-linked-list.jpg)
 
-```
+```plain text
 Input: head = [1,2,3,4,5]
 Output: [1,5,2,4,3]
 
@@ -48,7 +45,6 @@ Output: [1,5,2,4,3]
 
 - The number of nodes in the list is in the range `[1, 5 * 104]`.
 - `1 <= Node.val <= 1000`
-
 ```java
     /**
  * Definition for singly-linked list.
@@ -104,3 +100,4 @@ class Solution {
     }
 }
 ```
+
