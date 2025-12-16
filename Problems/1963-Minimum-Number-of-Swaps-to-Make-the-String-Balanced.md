@@ -1,9 +1,6 @@
-# 1963. Minimum Number of Swaps to Make the String Balanced
+# 1963. Minimum Number of Swaps to Make the String Balanced  
 
-Data structure: Stack
-Difficulty: Medium
-
-Medium
+  Data Structure: Stack </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -18,14 +15,13 @@ A string is called **balanced** if and only if:
 - It is the empty string, or
 - It can be written as `AB`, where both `A` and `B` are **balanced** strings, or
 - It can be written as `[C]`, where `C` is a **balanced** string.
-
 You may swap the brackets at **any** two indices **any** number of times.
 
-Return *the **minimum** number of swaps to make* `s` ***balanced***.
+Return *the ****minimum**** number of swaps to make *`s` ***balanced***.
 
 **Example 1:**
 
-```
+```plain text
 Input: s = "][]["
 Output: 1
 Explanation: You can make the string balanced by swapping index 0 with index 3.
@@ -35,7 +31,7 @@ The resulting string is "[[]]".
 
 **Example 2:**
 
-```
+```plain text
 Input: s = "]]][[["
 Output: 2
 Explanation: You can do the following to make the string balanced:
@@ -47,7 +43,7 @@ The resulting string is "[[][]]".
 
 **Example 3:**
 
-```
+```plain text
 Input: s = "[]"
 Output: 0
 Explanation: The string is already balanced.
@@ -59,9 +55,8 @@ Explanation: The string is already balanced.
 - `n == s.length`
 - `2 <= n <= 106`
 - `n` is even.
-- `s[i]` is either `'['` or `']'`.
+- `s[i]` is either `'[' `or `']'`.
 - The number of opening brackets `'['` equals `n / 2`, and the number of closing brackets `']'` equals `n / 2`.
-
 Hint 1
 
 Iterate over the string and keep track of the number of opening and closing brackets on each step.
@@ -94,3 +89,4 @@ class Solution {
     }
 }
 ```
+
