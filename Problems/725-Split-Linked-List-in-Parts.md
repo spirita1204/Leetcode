@@ -1,9 +1,6 @@
-# 725. Split Linked List in Parts
+# 725. Split Linked List in Parts  
 
-Methods: Basic logic
-Difficulty: Medium
-
-Medium
+  Methods: Basic logic </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -17,13 +14,13 @@ The length of each part should be as equal as possible: no two parts should have
 
 The parts should be in the order of occurrence in the input list, and parts occurring earlier should always have a size greater than or equal to parts occurring later.
 
-Return *an array of the* `k` *parts*.
+Return *an array of the *`k`* parts*.
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2021/06/13/split1-lc.jpg](https://assets.leetcode.com/uploads/2021/06/13/split1-lc.jpg)
+![Image](https://assets.leetcode.com/uploads/2021/06/13/split1-lc.jpg)
 
-```
+```plain text
 Input: head = [1,2,3], k = 5
 Output: [[1],[2],[3],[],[]]
 Explanation:
@@ -34,9 +31,9 @@ The last element output[4] is null, but its string representation as a ListNode 
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2021/06/13/split2-lc.jpg](https://assets.leetcode.com/uploads/2021/06/13/split2-lc.jpg)
+![Image](https://assets.leetcode.com/uploads/2021/06/13/split2-lc.jpg)
 
-```
+```plain text
 Input: head = [1,2,3,4,5,6,7,8,9,10], k = 3
 Output: [[1,2,3,4],[5,6,7],[8,9,10]]
 Explanation:
@@ -49,7 +46,6 @@ The input has been split into consecutive parts with size difference at most 1, 
 - The number of nodes in the list is in the range `[0, 1000]`.
 - `0 <= Node.val <= 1000`
 - `1 <= k <= 50`
-
 ```java
 /**
  * Definition for singly-linked list.
@@ -93,3 +89,4 @@ class Solution {
     }
 }
 ```
+
