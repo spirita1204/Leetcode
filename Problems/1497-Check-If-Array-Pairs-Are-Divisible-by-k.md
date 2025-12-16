@@ -1,9 +1,6 @@
-# 1497. Check If Array Pairs Are Divisible by k
+# 1497. Check If Array Pairs Are Divisible by k  
 
-Methods: Basic logic
-Difficulty: Medium
-
-Medium
+  Methods: Basic logic </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -15,11 +12,11 @@ Given an array of integers `arr` of even length `n` and an integer `k`.
 
 We want to divide the array into exactly `n / 2` pairs such that the sum of each pair is divisible by `k`.
 
-Return `true` *If you can find a way to do that or* `false` *otherwise*.
+Return `true`* If you can find a way to do that or *`false`* otherwise*.
 
 **Example 1:**
 
-```
+```plain text
 Input: arr = [1,2,3,4,5,10,6,7,8,9], k = 5
 Output: true
 Explanation: Pairs are (1,9),(2,8),(3,7),(4,6) and (5,10).
@@ -28,7 +25,7 @@ Explanation: Pairs are (1,9),(2,8),(3,7),(4,6) and (5,10).
 
 **Example 2:**
 
-```
+```plain text
 Input: arr = [1,2,3,4,5,6], k = 7
 Output: true
 Explanation: Pairs are (1,6),(2,5) and(3,4).
@@ -37,7 +34,7 @@ Explanation: Pairs are (1,6),(2,5) and(3,4).
 
 **Example 3:**
 
-```
+```plain text
 Input: arr = [1,2,3,4,5,6], k = 10
 Output: false
 Explanation: You can try all possible pairs to see that there is no way to divide arr into 3 pairs each with sum divisible by 10.
@@ -51,7 +48,6 @@ Explanation: You can try all possible pairs to see that there is no way to divid
 - `n` is even.
 - `109 <= arr[i] <= 109`
 - `1 <= k <= 105`
-
 ```java
 class Solution {
     public boolean canArrange(int[] arr, int k) {
@@ -71,3 +67,6 @@ class Solution {
     }
 }
 ```
+
+
+
