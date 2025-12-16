@@ -1,9 +1,6 @@
-# 214. Shortest Palindrome
+# 214. Shortest Palindrome  
 
-Methods: Basic logic
-Difficulty: Hard
-
-Hard
+  Methods: Basic logic </br> Difficulty: Hard </br> </br>Hard
 
 Topics
 
@@ -19,7 +16,7 @@ Return *the shortest palindrome you can find by performing this transformation*
 
 **Example 1:**
 
-```
+```plain text
 Input: s = "aacecaaa"
 Output: "aaacecaaa"
 
@@ -27,7 +24,7 @@ Output: "aaacecaaa"
 
 **Example 2:**
 
-```
+```plain text
 Input: s = "abcd"
 Output: "dcbabcd"
 
@@ -37,7 +34,6 @@ Output: "dcbabcd"
 
 - `0 <= s.length <= 5 * 104`
 - `s` consists of lowercase English letters only.
-
 ```java
 class Solution {
     public String shortestPalindrome(String s) {
@@ -53,3 +49,4 @@ class Solution {
     }
 }
 ```
+
