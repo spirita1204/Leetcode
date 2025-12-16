@@ -1,9 +1,6 @@
-# 633. Sum of Square Numbers
+# 633. Sum of Square Numbers  
 
-Methods: Pointer
-Difficulty: Medium
-
-**Medium**
+  Methods: Pointer </br> Difficulty: Medium </br> </br>**Medium**
 
 2.1K
 
@@ -15,7 +12,7 @@ Given a non-negative integer `c`, decide whether there're two integers `a` an
 
 **Example 1:**
 
-```
+```plain text
 Input: c = 5
 Output: true
 Explanation: 1 * 1 + 2 * 2 = 5
@@ -24,7 +21,7 @@ Explanation: 1 * 1 + 2 * 2 = 5
 
 **Example 2:**
 
-```
+```plain text
 Input: c = 3
 Output: false
 
@@ -33,7 +30,6 @@ Output: false
 **Constraints:**
 
 - `0 <= c <= 231 - 1`
-
 ```java
 class Solution {
     public boolean judgeSquareSum(int c) {
@@ -48,3 +44,4 @@ class Solution {
     }
 }
 ```
+
