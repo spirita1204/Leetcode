@@ -1,9 +1,6 @@
-# 731. My Calendar II
+# 731. My Calendar II  
 
-Data structure: Set
-Difficulty: Medium
-
-You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a **triple booking**.
+  Data Structure: Set </br> Difficulty: Medium </br> </br>You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a **triple booking**.
 
 A **triple booking** happens when three events have some non-empty intersection (i.e., some moment is common to all the three events.).
 
@@ -13,10 +10,9 @@ Implement the `MyCalendarTwo` class:
 
 - `MyCalendarTwo()` Initializes the calendar object.
 - `boolean book(int start, int end)` Returns `true` if the event can be added to the calendar successfully without causing a **triple booking**. Otherwise, return `false` and do not add the event to the calendar.
-
 **Example 1:**
 
-```
+```plain text
 Input
 ["MyCalendarTwo", "book", "book", "book", "book", "book", "book"]
 [[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]
@@ -38,7 +34,6 @@ myCalendarTwo.book(25, 55); // return True, The event can be booked, as the time
 
 - `0 <= start < end <= 109`
 - At most `1000` calls will be made to `book`.
-
 ```java
 class MyCalendarTwo {
     Set<Pair> calendar1;// 存所有區間
@@ -84,3 +79,4 @@ class Pair {
  * boolean param_1 = obj.book(start,end);
  */
 ```
+
