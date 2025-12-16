@@ -1,9 +1,6 @@
-# 611. Valid Triangle Number
+# 611. Valid Triangle Number  
 
-Methods: Binary Search
-Difficulty: Medium
-
-Medium
+  Methods: Binary Search </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -13,7 +10,7 @@ Given an integer array `nums`, return *the number of triplets chosen from the 
 
 **Example 1:**
 
-```
+```plain text
 Input: nums = [2,2,3,4]
 Output: 3
 Explanation: Valid combinations are:
@@ -25,7 +22,7 @@ Explanation: Valid combinations are:
 
 **Example 2:**
 
-```
+```plain text
 Input: nums = [4,2,3,4]
 Output: 4
 
@@ -35,7 +32,6 @@ Output: 4
 
 - `1 <= nums.length <= 1000`
 - `0 <= nums[i] <= 1000`
-
 ```java
 class Solution {
     public int triangleNumber(int[] nums) {
@@ -67,3 +63,4 @@ class Solution {
     }
 }
 ```
+
