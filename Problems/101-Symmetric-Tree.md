@@ -1,16 +1,12 @@
-# 101. Symmetric Tree
+# 101. Symmetric Tree  
 
-Data structure: Stack
-Methods: BFS
-Difficulty: Easy
-
-Given the `root` of a binary tree, *check whether it is a mirror of itself* (i.e., symmetric around its center).
+  Methods: BFS </br> Difficulty: Easy </br> </br>Given the `root` of a binary tree, *check whether it is a mirror of itself* (i.e., symmetric around its center).
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg](https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg)
+![Image](https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg)
 
-```
+```plain text
 Input: root = [1,2,2,3,4,4,3]
 Output: true
 
@@ -18,9 +14,9 @@ Output: true
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2021/02/19/symtree2.jpg](https://assets.leetcode.com/uploads/2021/02/19/symtree2.jpg)
+![Image](https://assets.leetcode.com/uploads/2021/02/19/symtree2.jpg)
 
-```
+```plain text
 Input: root = [1,2,2,null,3,null,3]
 Output: false
 
@@ -30,8 +26,7 @@ Output: false
 
 - The number of nodes in the tree is in the range `[1, 1000]`.
 - `100 <= Node.val <= 100`
-
-```jsx
+```javascript
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -104,3 +99,4 @@ class Solution {
         } 
     }
 ```
+
