@@ -1,9 +1,6 @@
-# 735. Asteroid Collision
+# 735. Asteroid Collision  
 
-Data structure: Stack
-Difficulty: Medium
-
-Medium
+  Data Structure: Stack </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -19,7 +16,7 @@ Find out the state of the asteroids after all collisions. If two asteroids meet,
 
 **Example 1:**
 
-```
+```plain text
 Input: asteroids = [5,10,-5]
 Output: [5,10]
 Explanation: The 10 and -5 collide resulting in 10. The 5 and 10 never collide.
@@ -28,7 +25,7 @@ Explanation: The 10 and -5 collide resulting in 10. The 5 and 10 never collide.
 
 **Example 2:**
 
-```
+```plain text
 Input: asteroids = [8,-8]
 Output: []
 Explanation: The 8 and -8 collide exploding each other.
@@ -37,7 +34,7 @@ Explanation: The 8 and -8 collide exploding each other.
 
 **Example 3:**
 
-```
+```plain text
 Input: asteroids = [10,2,-5]
 Output: [10]
 Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulting in 10.
@@ -49,7 +46,6 @@ Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulti
 - `2 <= asteroids.length <= 104`
 - `1000 <= asteroids[i] <= 1000`
 - `asteroids[i] != 0`
-
 ```java
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {
@@ -93,3 +89,4 @@ class Solution {
     }
 }
 ```
+
