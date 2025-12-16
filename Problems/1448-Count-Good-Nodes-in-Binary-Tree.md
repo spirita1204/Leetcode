@@ -1,9 +1,6 @@
-# 1448. Count Good Nodes in Binary Tree
+# 1448. Count Good Nodes in Binary Tree  
 
-Methods: DFS
-Difficulty: Medium
-
-Medium
+  Methods: DFS </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -17,9 +14,9 @@ Return the number of **good** nodes in the binary tree.
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2020/04/02/test_sample_1.png](https://assets.leetcode.com/uploads/2020/04/02/test_sample_1.png)
+![Image](https://assets.leetcode.com/uploads/2020/04/02/test_sample_1.png)
 
-```
+```plain text
 Input: root = [3,1,4,3,null,1,5]
 Output: 4
 Explanation: Nodes in blue aregood.
@@ -31,9 +28,9 @@ Node 3 -> (3,1,3) is the maximum value in the path.
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2020/04/02/test_sample_2.png](https://assets.leetcode.com/uploads/2020/04/02/test_sample_2.png)
+![Image](https://assets.leetcode.com/uploads/2020/04/02/test_sample_2.png)
 
-```
+```plain text
 Input: root = [3,3,null,4,2]
 Output: 3
 Explanation: Node 2 -> (3, 3, 2) is not good, because "3" is higher than it.
@@ -41,7 +38,7 @@ Explanation: Node 2 -> (3, 3, 2) is not good, because "3" is higher than it.
 
 **Example 3:**
 
-```
+```plain text
 Input: root = [1]
 Output: 1
 Explanation: Root is considered asgood.
@@ -51,7 +48,6 @@ Explanation: Root is considered asgood.
 
 - The number of nodes in the binary tree is in the range `[1, 10^5]`.
 - Each node's value is between `[-10^4, 10^4]`.
-
 ```java
 /**
  * Definition for a binary tree node.
@@ -88,3 +84,4 @@ class Solution {
     }
 }
 ```
+
