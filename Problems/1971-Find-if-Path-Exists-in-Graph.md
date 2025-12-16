@@ -1,9 +1,6 @@
-# 1971. Find if Path Exists in Graph
+# 1971. Find if Path Exists in Graph  
 
-Data structure: Graph
-Difficulty: Easy
-
-Easy
+  Data Structure: Graph </br> Difficulty: Easy </br> </br>Easy
 
 Topics
 
@@ -13,13 +10,13 @@ There is a **bi-directional** graph with `n` vertices, where each vertex is 
 
 You want to determine if there is a **valid path** that exists from vertex `source` to vertex `destination`.
 
-Given `edges` and the integers `n`, `source`, and `destination`, return `true` *if there is a **valid path** from* `source` *to* `destination`*, or* `false` *otherwise.*
+Given `edges` and the integers `n`, `source`, and `destination`, return `true`* if there is a ****valid path**** from *`source`* to *`destination`*, or *`false`* otherwise.*
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2021/08/14/validpath-ex1.png](https://assets.leetcode.com/uploads/2021/08/14/validpath-ex1.png)
+![Image](https://assets.leetcode.com/uploads/2021/08/14/validpath-ex1.png)
 
-```
+```plain text
 Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
 Output: true
 Explanation: There are two paths from vertex 0 to vertex 2:
@@ -30,9 +27,9 @@ Explanation: There are two paths from vertex 0 to vertex 2:
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2021/08/14/validpath-ex2.png](https://assets.leetcode.com/uploads/2021/08/14/validpath-ex2.png)
+![Image](https://assets.leetcode.com/uploads/2021/08/14/validpath-ex2.png)
 
-```
+```plain text
 Input: n = 6, edges = [[0,1],[0,2],[3,5],[5,4],[4,3]], source = 0, destination = 5
 Output: false
 Explanation: There is no path from vertex 0 to vertex 5.
@@ -49,7 +46,6 @@ Explanation: There is no path from vertex 0 to vertex 5.
 - `0 <= source, destination <= n - 1`
 - There are no duplicate edges.
 - There are no self edges.
-
 ```java
 class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
@@ -87,3 +83,4 @@ class Solution {
     }
 }
 ```
+
