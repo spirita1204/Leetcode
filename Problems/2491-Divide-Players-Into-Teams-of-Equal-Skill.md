@@ -1,9 +1,6 @@
-# 2491. Divide Players Into Teams of Equal Skill
+# 2491. Divide Players Into Teams of Equal Skill  
 
-Methods: Basic logic
-Difficulty: Medium
-
-Medium
+  Methods: Basic logic </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -15,11 +12,11 @@ You are given a positive integer array `skill` of **even** length `n` wher
 
 The **chemistry** of a team is equal to the **product** of the skills of the players on that team.
 
-Return *the sum of the **chemistry** of all the teams, or return* `-1` *if there is no way to divide the players into teams such that the total skill of each team is equal.*
+Return *the sum of the ****chemistry**** of all the teams, or return *`-1`* if there is no way to divide the players into teams such that the total skill of each team is equal.*
 
 **Example 1:**
 
-```
+```plain text
 Input: skill = [3,2,5,1,3,4]
 Output: 22
 Explanation:
@@ -30,7 +27,7 @@ The sum of the chemistry of all the teams is: 1 * 5 + 2 * 4 + 3 * 3 = 5 + 8 + 9 
 
 **Example 2:**
 
-```
+```plain text
 Input: skill = [3,4]
 Output: 12
 Explanation:
@@ -41,7 +38,7 @@ The chemistry of the team is 3 * 4 = 12.
 
 **Example 3:**
 
-```
+```plain text
 Input: skill = [1,1,2,3]
 Output: -1
 Explanation:
@@ -54,7 +51,6 @@ There is no way to divide the players into teams such that the total skill of ea
 - `2 <= skill.length <= 105`
 - `skill.length` is even.
 - `1 <= skill[i] <= 1000`
-
 ```java
 class Solution {
     public long dividePlayers(int[] skill) {
@@ -71,3 +67,4 @@ class Solution {
     }
 }
 ```
+
