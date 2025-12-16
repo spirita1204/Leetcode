@@ -1,9 +1,6 @@
-# 641. Design Circular Deque
+# 641. Design Circular Deque  
 
-Methods: Pointer
-Difficulty: Medium
-
-Design your implementation of the circular double-ended queue (deque).
+  Methods: Pointer </br> Difficulty: Medium </br> </br>Design your implementation of the circular double-ended queue (deque).
 
 Implement the `MyCircularDeque` class:
 
@@ -16,10 +13,9 @@ Implement the `MyCircularDeque` class:
 - `int getRear()` Returns the last item from Deque. Returns `1` if the deque is empty.
 - `boolean isEmpty()` Returns `true` if the deque is empty, or `false` otherwise.
 - `boolean isFull()` Returns `true` if the deque is full, or `false` otherwise.
-
 **Example 1:**
 
-```
+```plain text
 Input
 ["MyCircularDeque", "insertLast", "insertLast", "insertFront", "insertFront", "getRear", "isFull", "deleteLast", "insertFront", "getFront"]
 [[3], [1], [2], [3], [4], [], [], [], [4], []]
@@ -45,7 +41,6 @@ myCircularDeque.getFront();     // return 4
 - `1 <= k <= 1000`
 - `0 <= value <= 1000`
 - At most `2000` calls will be made to `insertFront`, `insertLast`, `deleteFront`, `deleteLast`, `getFront`, `getRear`, `isEmpty`, `isFull`.
-
 ```java
 class MyCircularDeque {// 透過指標移動 填值
     int[] arr;
@@ -123,3 +118,4 @@ class MyCircularDeque {// 透過指標移動 填值
  * boolean param_8 = obj.isFull();
  */
 ```
+
