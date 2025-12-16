@@ -1,9 +1,6 @@
-# 273. Integer to English Words
+# 273. Integer to English Words  
 
-Methods: Recursion
-Difficulty: Hard
-
-Hard
+  Methods: Recursion </br> Difficulty: Hard </br> </br>Hard
 
 Topics
 
@@ -15,7 +12,7 @@ Convert a non-negative integer `num` to its English words representation.
 
 **Example 1:**
 
-```
+```plain text
 Input: num = 123
 Output: "One Hundred Twenty Three"
 
@@ -23,7 +20,7 @@ Output: "One Hundred Twenty Three"
 
 **Example 2:**
 
-```
+```plain text
 Input: num = 12345
 Output: "Twelve Thousand Three Hundred Forty Five"
 
@@ -31,7 +28,7 @@ Output: "Twelve Thousand Three Hundred Forty Five"
 
 **Example 3:**
 
-```
+```plain text
 Input: num = 1234567
 Output: "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
 
@@ -40,7 +37,6 @@ Output: "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
 **Constraints:**
 
 - `0 <= num <= 231 - 1`
-
 ```java
 class Solution {
     private String[] LESS_THAN_20 = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
@@ -75,3 +71,4 @@ class Solution {
     }
 }
 ```
+
