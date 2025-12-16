@@ -1,9 +1,6 @@
-# 1177. Can Make Palindrome from Substring
+# 1177. Can Make Palindrome from Substring  
 
-Methods: Prefix Sum
-Difficulty: Medium
-
-Medium
+  Methods: Prefix Sum </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -21,7 +18,7 @@ Note that each letter is counted individually for replacement, so if, for exampl
 
 **Example :**
 
-```
+```plain text
 Input: s = "abcda", queries = [[3,3,0],[1,2,0],[0,3,1],[0,3,2],[0,4,1]]
 Output: [true,false,false,true,true]
 Explanation:
@@ -35,7 +32,7 @@ queries[4]: substring = "abcda", could be changed to "abcba" which is palidrome.
 
 **Example 2:**
 
-```
+```plain text
 Input: s = "lyb", queries = [[0,1,0],[2,2,1]]
 Output: [false,true]
 
@@ -47,7 +44,6 @@ Output: [false,true]
 - `0 <= lefti <= righti < s.length`
 - `0 <= ki <= s.length`
 - `s` consists of lowercase English letters.
-
 ```java
 class Solution {
     public List<Boolean> canMakePaliQueries(String s, int[][] queries) {
@@ -76,3 +72,4 @@ class Solution {
     }
 }
 ```
+
