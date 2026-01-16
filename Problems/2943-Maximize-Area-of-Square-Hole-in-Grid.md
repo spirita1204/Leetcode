@@ -57,6 +57,9 @@ One way to get the maximum square-shaped hole is by removing horizontal bar 3, a
 ```java
 class Solution {
     public int maximizeSquareHoleArea(int n, int m, int[] hBars, int[] vBars) {
+        // 最大正方形邊長
+        // = min(連續可移除的水平 bars 數 + 1,
+        //     連續可移除的垂直 bars 數 + 1)
         int maxConsecutiveHBars = 1;
         int maxConsecutiveVBars = 1;
 
@@ -84,10 +87,11 @@ class Solution {
                 tempV = 1;
             }
         }
-
+       
         maxConsecutiveHBars = Math.max(maxConsecutiveHBars, tempH);
         maxConsecutiveVBars = Math.max(maxConsecutiveVBars, tempV);
-
+         System.out.println(maxConsecutiveHBars);
+          System.out.println(maxConsecutiveVBars);
         int squareLen = Math.min(maxConsecutiveHBars, maxConsecutiveVBars) + 1;
 
         return squareLen * squareLen;
