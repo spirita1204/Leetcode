@@ -1,6 +1,6 @@
 # 3363. Find the Maximum Number of Fruits Collected  
 
-  Difficulty: Medium,Hard </br> </br>There is a game dungeon comprised of `n x n` rooms arranged in a grid.
+  Methods: DFS </br> Difficulty: Hard </br> </br>There is a game dungeon comprised of `n x n` rooms arranged in a grid.
 
 You are given a 2D array `fruits` of size `n x n`, where `fruits[i][j]` represents the number of fruits in the room `(i, j)`. Three children will play in the game dungeon, with **initial** positions at the corner rooms `(0, 0)`, `(0, n - 1)`, and `(n - 1, 0)`.
 
