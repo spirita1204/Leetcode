@@ -1,6 +1,8 @@
 # 3721. Longest Balanced Subarray II  
 
-  Data Structure: Binary Indexed Tree(Fenwick Tree) </br> Difficulty: Hard </br> </br>You are given an integer array `nums`.   
+  Data Structure: Binary Indexed Tree(Fenwick Tree) </br> Difficulty: Hard </br> </br>[https://www.youtube.com/watch?v=rYBtViWXYeI](https://www.youtube.com/watch?v=rYBtViWXYeI)
+
+You are given an integer array `nums`.   
 
 A **subarray** is called **balanced** if the number of **distinct even** numbers in the subarray is equal to the number of **distinct odd** numbers.
 
