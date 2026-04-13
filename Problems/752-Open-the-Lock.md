@@ -1,10 +1,6 @@
-# 752. Open the Lock
+# 752. Open the Lock  
 
-Methods: BFS
-Data structure: Set
-Difficulty: Medium
-
-Medium
+  Methods: BFS </br> Data Structure: Set </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -22,7 +18,7 @@ Given a `target` representing the value of the wheels that will unlock the loc
 
 **Example 1:**
 
-```
+```plain text
 Input: deadends = ["0201","0101","0102","1212","2002"], target = "0202"
 Output: 6
 Explanation:
@@ -34,7 +30,7 @@ because the wheels of the lock become stuck after the display becomes the dead e
 
 **Example 2:**
 
-```
+```plain text
 Input: deadends = ["8888"], target = "0009"
 Output: 1
 Explanation: We can turn the last wheel in reverse to move from "0000" -> "0009".
@@ -43,7 +39,7 @@ Explanation: We can turn the last wheel in reverse to move from "0000" -> "0009"
 
 **Example 3:**
 
-```
+```plain text
 Input: deadends = ["8887","8889","8878","8898","8788","8988","7888","9888"], target = "8888"
 Output: -1
 Explanation: We cannot reach the target without getting stuck.
@@ -57,7 +53,6 @@ Explanation: We cannot reach the target without getting stuck.
 - `target.length == 4`
 - target **will not be** in the list `deadends`.
 - `target` and `deadends[i]` consist of digits only.
-
 ```java
 class Solution {
     public int openLock(String[] deadends, String target) {
@@ -101,3 +96,4 @@ class Solution {
     }
 }
 ```
+
