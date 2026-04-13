@@ -1,9 +1,6 @@
-# 1608. Special Array With X Elements Greater Than or Equal X
+# 1608. Special Array With X Elements Greater Than or Equal X  
 
-Methods: Binary Search
-Difficulty: Easy
-
-**Easy**
+  Methods: Binary Search </br> Difficulty: Easy </br> </br>**Easy**
 
 1.3K
 
@@ -15,11 +12,11 @@ You are given an array `nums` of non-negative integers. `nums` is considered
 
 Notice that `x` **does not** have to be an element in `nums`.
 
-Return `x` *if the array is **special**, otherwise, return* `-1`. It can be proven that if `nums` is special, the value for `x` is **unique**.
+Return `x` *if the array is ****special****, otherwise, return *`-1`. It can be proven that if `nums` is special, the value for `x` is **unique**.
 
 **Example 1:**
 
-```
+```plain text
 Input: nums = [3,5]
 Output: 2
 Explanation: There are 2 values (3 and 5) that are greater than or equal to 2.
@@ -28,7 +25,7 @@ Explanation: There are 2 values (3 and 5) that are greater than or equal to 2.
 
 **Example 2:**
 
-```
+```plain text
 Input: nums = [0,0]
 Output: -1
 Explanation: No numbers fit the criteria for x.
@@ -41,7 +38,7 @@ x cannot be greater since there are only 2 numbers in nums.
 
 **Example 3:**
 
-```
+```plain text
 Input: nums = [0,4,3,0,4]
 Output: 3
 Explanation: There are 3 values that are greater than or equal to 3.
@@ -52,7 +49,6 @@ Explanation: There are 3 values that are greater than or equal to 3.
 
 - `1 <= nums.length <= 100`
 - `0 <= nums[i] <= 1000`
-
 ```java
 class Solution {
     public int specialArray(int[] nums) {
@@ -77,3 +73,4 @@ class Solution {
     }
 }
 ```
+
