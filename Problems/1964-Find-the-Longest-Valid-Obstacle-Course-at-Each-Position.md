@@ -1,9 +1,6 @@
-# 1964. Find the Longest Valid Obstacle Course at Each Position
+# 1964. Find the Longest Valid Obstacle Course at Each Position  
 
-Methods: Binary Search
-Difficulty: Hard
-
-**Hard**
+  Methods: Binary Search </br> Difficulty: Hard </br> </br>**Hard**
 
 1.1K
 
@@ -19,12 +16,11 @@ For every index `i` between `0` and `n - 1` (**inclusive**), find the leng
 - You must include the `ith` obstacle in the course.
 - You must put the chosen obstacles in the **same order** as they appear in `obstacles`.
 - Every obstacle (except the first) is **taller** than or the **same height** as the obstacle immediately before it.
-
-Return *an array* `ans` *of length* `n`, *where* `ans[i]` *is the length of the **longest obstacle course** for index* `i` *as described above*.
+Return *an array* `ans` *of length* `n`, *where* `ans[i]` *is the length of the ****longest obstacle course**** for index* `i`* as described above*.
 
 **Example 1:**
 
-```
+```plain text
 Input: obstacles = [1,2,3,2]
 Output: [1,2,3,3]
 Explanation: The longest valid obstacle course at each position is:
@@ -37,7 +33,7 @@ Explanation: The longest valid obstacle course at each position is:
 
 **Example 2:**
 
-```
+```plain text
 Input: obstacles = [2,2,1]
 Output: [1,2,1]
 Explanation:The longest valid obstacle course at each position is:
@@ -49,7 +45,7 @@ Explanation:The longest valid obstacle course at each position is:
 
 **Example 3:**
 
-```
+```plain text
 Input: obstacles = [3,1,5,6,4,2]
 Output: [1,1,2,3,2,2]
 Explanation: The longest valid obstacle course at each position is:
@@ -67,7 +63,6 @@ Explanation: The longest valid obstacle course at each position is:
 - `n == obstacles.length`
 - `1 <= n <= 105`
 - `1 <= obstacles[i] <= 107`
-
 ```java
 class Solution {
     public int[] longestObstacleCourseAtEachPosition(int[] obstacles) {
@@ -96,3 +91,4 @@ class Solution {
     }
 }
 ```
+
