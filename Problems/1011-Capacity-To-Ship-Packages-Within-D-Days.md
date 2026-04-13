@@ -1,11 +1,6 @@
-# 1011. Capacity To Ship Packages Within D Days
+# 1011. Capacity To Ship Packages Within D Days  
 
-Methods: Binary Search
-Difficulty: Medium
-
-[LeetCode - The World's Leading Online Programming Learning Platform](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/solutions/3216553/binary-search-explained-video-java-c-python/)
-
-A conveyor belt has packages that must be shipped from one port to another within `days` days.
+  Methods: Binary Search </br> Difficulty: Medium </br> </br>A conveyor belt has packages that must be shipped from one port to another within `days` days.
 
 The `ith` package on the conveyor belt has a weight of `weights[i]`. Each day, we load the ship with packages on the conveyor belt (in the order given by `weights`). We may not load more weight than the maximum weight capacity of the ship.
 
@@ -13,7 +8,7 @@ Return the least weight capacity of the ship that will result in all the package
 
 **Example 1:**
 
-```
+```plain text
 Input: weights = [1,2,3,4,5,6,7,8,9,10], days = 5
 Output: 15
 Explanation: A ship capacity of 15 is the minimum to ship all the packages in 5 days like this:
@@ -29,7 +24,7 @@ Note that the cargo must be shipped in the order given, so using a ship of capac
 
 **Example 2:**
 
-```
+```plain text
 Input: weights = [3,2,2,4,1,4], days = 3
 Output: 6
 Explanation: A ship capacity of 6 is the minimum to ship all the packages in 3 days like this:
@@ -41,7 +36,7 @@ Explanation: A ship capacity of 6 is the minimum to ship all the packages in 3 d
 
 **Example 3:**
 
-```
+```plain text
 Input: weights = [1,2,3,1,1], days = 4
 Output: 3
 Explanation:
@@ -86,3 +81,4 @@ class Solution {
     }
 }
 ```
+
