@@ -1,9 +1,6 @@
-# 981. Time Based Key-Value Store
+# 981. Time Based Key-Value Store  
 
-Data structure: Hash Table
-Difficulty: Medium
-
-Medium
+  Data Structure: Hash Table </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -16,10 +13,9 @@ Implement the `TimeMap` class:
 - `TimeMap()` Initializes the object of the data structure.
 - `void set(String key, String value, int timestamp)` Stores the key `key` with the value `value` at the given time `timestamp`.
 - `String get(String key, int timestamp)` Returns a value such that `set` was called previously, with `timestamp_prev <= timestamp`. If there are multiple such values, it returns the value associated with the largest `timestamp_prev`. If there are no values, it returns `""`.
-
 **Example 1:**
 
-```
+```plain text
 Input
 ["TimeMap", "set", "get", "get", "set", "get", "get"]
 [[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]
@@ -44,7 +40,6 @@ timeMap.get("foo", 5);         // return "bar2"
 - `1 <= timestamp <= 107`
 - All the timestamps `timestamp` of `set` are strictly increasing.
 - At most `2 * 105` calls will be made to `set` and `get`.
-
 ```java
 class TimeMap {
     Map<String, TreeMap<Integer, String>> map;
@@ -78,3 +73,4 @@ class TimeMap {
  * String param_2 = obj.get(key,timestamp);
  */
 ```
+
