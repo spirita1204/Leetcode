@@ -1,9 +1,6 @@
-# 744. Find Smallest Letter Greater Than Target
+# 744. Find Smallest Letter Greater Than Target  
 
-Methods: Binary Search
-Difficulty: Easy
-
-**Easy**
+  Methods: Binary Search </br> Difficulty: Easy </br> </br>**Easy**
 
 2.8K
 
@@ -13,11 +10,11 @@ Companies
 
 You are given an array of characters `letters` that is sorted in **non-decreasing order**, and a character `target`. There are **at least two different** characters in `letters`.
 
-Return *the smallest character in* `letters` *that is lexicographically greater than* `target`. If such a character does not exist, return the first character in `letters`.
+Return *the smallest character in *`letters`* that is lexicographically greater than *`target`. If such a character does not exist, return the first character in `letters`.
 
 **Example 1:**
 
-```
+```plain text
 Input: letters = ["c","f","j"], target = "a"
 Output: "c"
 Explanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.
@@ -26,7 +23,7 @@ Explanation: The smallest character that is lexicographically greater than 'a' i
 
 **Example 2:**
 
-```
+```plain text
 Input: letters = ["c","f","j"], target = "c"
 Output: "f"
 Explanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.
@@ -35,7 +32,7 @@ Explanation: The smallest character that is lexicographically greater than 'c' i
 
 **Example 3:**
 
-```
+```plain text
 Input: letters = ["x","x","y","y"], target = "z"
 Output: "x"
 Explanation: There are no characters in letters that is lexicographically greater than 'z' so we return letters[0].
@@ -49,7 +46,6 @@ Explanation: There are no characters in letters that is lexicographically greate
 - `letters` is sorted in **non-decreasing** order.
 - `letters` contains at least two different characters.
 - `target` is a lowercase English letter.
-
 ```java
 class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
@@ -68,3 +64,4 @@ class Solution {
     }
 }
 ```
+
