@@ -1,9 +1,6 @@
-# 2295. Replace Elements in an Array
+# 2295. Replace Elements in an Array  
 
-Data structure: Hash Table
-Difficulty: Medium
-
-Medium
+  Data Structure: Hash Table </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -17,12 +14,11 @@ It is guaranteed that in the `ith` operation:
 
 - `operations[i][0]` **exists** in `nums`.
 - `operations[i][1]` does **not** exist in `nums`.
-
 Return *the array obtained after applying all the operations*.
 
 **Example 1:**
 
-```
+```plain text
 Input: nums = [1,2,4,6], operations = [[1,3],[4,7],[6,1]]
 Output: [3,2,7,1]
 Explanation: We perform the following operations on nums:
@@ -35,7 +31,7 @@ We return the final array [3,2,7,1].
 
 **Example 2:**
 
-```
+```plain text
 Input: nums = [1,2], operations = [[1,3],[2,1],[3,2]]
 Output: [2,1]
 Explanation: We perform the following operations to nums:
@@ -56,7 +52,6 @@ We return the array [2,1].
 - `1 <= nums[i], operations[i][0], operations[i][1] <= 106`
 - `operations[i][0]` will exist in `nums` when applying the `ith` operation.
 - `operations[i][1]` will not exist in `nums` when applying the `ith` operation.
-
 ## **Time Limit Exceeded**
 
 ```java
@@ -94,3 +89,4 @@ class Solution {
     }
 }
 ```
+
