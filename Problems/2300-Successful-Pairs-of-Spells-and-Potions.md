@@ -1,9 +1,6 @@
-# 2300. Successful Pairs of Spells and Potions
+# 2300. Successful Pairs of Spells and Potions  
 
-Methods: Binary Search
-Difficulty: Medium
-
-**Medium**
+  Methods: Binary Search </br> Difficulty: Medium </br> </br>**Medium**
 
 1.4K
 
@@ -15,11 +12,11 @@ You are given two positive integer arrays `spells` and `potions`, of length 
 
 You are also given an integer `success`. A spell and potion pair is considered **successful** if the **product** of their strengths is **at least** `success`.
 
-Return *an integer array* `pairs` *of length* `n` *where* `pairs[i]` *is the number of **potions** that will form a successful pair with the* `ith` *spell.*
+Return *an integer array *`pairs`* of length *`n`* where *`pairs[i]`* is the number of ****potions**** that will form a successful pair with the *`ith`* spell.*
 
 **Example 1:**
 
-```
+```plain text
 Input: spells = [5,1,3], potions = [1,2,3,4,5], success = 7
 Output: [4,0,3]
 Explanation:
@@ -32,7 +29,7 @@ Thus, [4,0,3] is returned.
 
 **Example 2:**
 
-```
+```plain text
 Input: spells = [3,1,2], potions = [8,5,8], success = 16
 Output: [2,0,2]
 Explanation:
@@ -50,7 +47,6 @@ Thus, [2,0,2] is returned.
 - `1 <= n, m <= 105`
 - `1 <= spells[i], potions[i] <= 105`
 - `1 <= success <= 1010`
-
 ```java
 class Solution {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
@@ -74,3 +70,4 @@ class Solution {
     }
 }
 ```
+
