@@ -1,9 +1,6 @@
-# 78. Subsets
+# 78. Subsets  
 
-Methods: DFS
-Difficulty: Medium
-
-**Medium**
+  Methods: DFS </br> Difficulty: Medium </br> </br>**Medium**
 
 14.2K
 
@@ -23,7 +20,7 @@ The solution set **must not** contain duplicate subsets. Return the solution i
 
 **Example 1:**
 
-```
+```plain text
 Input: nums = [1,2,3]
 Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 
@@ -31,7 +28,7 @@ Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 
 **Example 2:**
 
-```
+```plain text
 Input: nums = [0]
 Output: [[],[0]]
 
@@ -42,7 +39,6 @@ Output: [[],[0]]
 - `1 <= nums.length <= 10`
 - `10 <= nums[i] <= 10`
 - All the numbers of `nums` are **unique**.
-
 ```java
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
@@ -89,3 +85,4 @@ class Solution {
     }
 }
 ```
+
