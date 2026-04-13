@@ -1,9 +1,6 @@
-# 274. H-Index
+# 274. H-Index  
 
-Methods: Binary Search
-Difficulty: Medium
-
-Medium
+  Methods: Binary Search </br> Difficulty: Medium </br> </br>Medium
 
 Topics
 
@@ -17,7 +14,7 @@ According to the [definition of h-index on Wikipedia](https://en.wikipedia.org/
 
 **Example 1:**
 
-```
+```plain text
 Input: citations = [3,0,6,1,5]
 Output: 3
 Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.
@@ -27,7 +24,7 @@ Since the researcher has 3 papers with at least 3 citations each and the remaini
 
 **Example 2:**
 
-```
+```plain text
 Input: citations = [1,3,1]
 Output: 1
 
@@ -38,7 +35,6 @@ Output: 1
 - `n == citations.length`
 - `1 <= n <= 5000`
 - `0 <= citations[i] <= 1000`
-
 ```java
 class Solution {
     public int hIndex(int[] citations) {
@@ -59,3 +55,4 @@ class Solution {
     }
 }
 ```
+
