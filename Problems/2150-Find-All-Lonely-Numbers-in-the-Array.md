@@ -1,15 +1,12 @@
-# 2150. Find All Lonely Numbers in the Array
+# 2150. Find All Lonely Numbers in the Array  
 
-Data structure: Hash Table
-Difficulty: Medium
+  Data Structure: Hash Table </br> Difficulty: Medium </br> </br>You are given an integer array `nums`. A number `x` is **lonely** when it appears only **once**, and no **adjacent** numbers (i.e. `x + 1` and `x - 1)` appear in the array.
 
-You are given an integer array `nums`. A number `x` is **lonely** when it appears only **once**, and no **adjacent** numbers (i.e. `x + 1` and `x - 1)` appear in the array.
-
-Return ***all** lonely numbers in* `nums`. You may return the answer in **any order**.
+Return ***all**** lonely numbers in *`nums`. You may return the answer in **any order**.
 
 **Example 1:**
 
-```
+```plain text
 Input: nums = [10,6,5,8]
 Output: [10,8]
 Explanation:
@@ -23,7 +20,7 @@ Note that [8, 10] may also be returned.
 
 **Example 2:**
 
-```
+```plain text
 Input: nums = [1,3,5,3]
 Output: [1,5]
 Explanation:
@@ -51,3 +48,4 @@ class Solution {
     }
 }
 ```
+
