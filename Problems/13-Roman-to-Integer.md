@@ -1,9 +1,6 @@
-# 13. Roman to Integer
+# 13. Roman to Integer  
 
-Data structure: Set
-Difficulty: Easy
-
-Easy
+  Data Structure: Set </br> Difficulty: Easy </br> </br>Easy
 
 Topics
 
@@ -13,7 +10,7 @@ Hint
 
 Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
 
-```
+```plain text
 SymbolValue
 I             1
 V             5
@@ -31,12 +28,11 @@ Roman numerals are usually written largest to smallest from left to right. Howev
 - `I` can be placed before `V` (5) and `X` (10) to make 4 and 9.
 - `X` can be placed before `L` (50) and `C` (100) to make 40 and 90.
 - `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
-
 Given a roman numeral, convert it to an integer.
 
 **Example 1:**
 
-```
+```plain text
 Input: s = "III"
 Output: 3
 Explanation: III = 3.
@@ -45,7 +41,7 @@ Explanation: III = 3.
 
 **Example 2:**
 
-```
+```plain text
 Input: s = "LVIII"
 Output: 58
 Explanation: L = 50, V= 5, III = 3.
@@ -54,7 +50,7 @@ Explanation: L = 50, V= 5, III = 3.
 
 **Example 3:**
 
-```
+```plain text
 Input: s = "MCMXCIV"
 Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
@@ -66,7 +62,6 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 - `1 <= s.length <= 15`
 - `s` contains only the characters `('I', 'V', 'X', 'L', 'C', 'D', 'M')`.
 - It is **guaranteed** that `s` is a valid roman numeral in the range `[1, 3999]`.
-
 ```java
 class Solution {
     public int romanToInt(String s) {
@@ -100,3 +95,4 @@ class Solution {
     }
 }
 ```
+
