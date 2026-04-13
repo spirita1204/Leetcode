@@ -1,17 +1,14 @@
-# 939. Minimum Area Rectangle
+# 939. Minimum Area Rectangle  
 
-Data structure: Hash Table, Set
-Difficulty: Medium
-
-You are given an array of points in the **X-Y** plane `points` where `points[i] = [xi, yi]`.
+  Data Structure: Hash Table,Set </br> Difficulty: Medium </br> </br>You are given an array of points in the **X-Y** plane `points` where `points[i] = [xi, yi]`.
 
 Return *the minimum area of a rectangle formed from these points, with sides parallel to the X and Y axes*. If there is not any such rectangle, return `0`.
 
 **Example 1:**
 
-![https://assets.leetcode.com/uploads/2021/08/03/rec1.JPG](https://assets.leetcode.com/uploads/2021/08/03/rec1.JPG)
+![Image](https://assets.leetcode.com/uploads/2021/08/03/rec1.JPG)
 
-```
+```plain text
 Input: points = [[1,1],[1,3],[3,1],[3,3],[2,2]]
 Output: 4
 
@@ -19,9 +16,9 @@ Output: 4
 
 **Example 2:**
 
-![https://assets.leetcode.com/uploads/2021/08/03/rec2.JPG](https://assets.leetcode.com/uploads/2021/08/03/rec2.JPG)
+![Image](https://assets.leetcode.com/uploads/2021/08/03/rec2.JPG)
 
-```
+```plain text
 Input: points = [[1,1],[1,3],[3,1],[3,3],[4,1],[4,3]]
 Output: 2
 
@@ -33,7 +30,6 @@ Output: 2
 - `points[i].length == 2`
 - `0 <= xi, yi <= 4 * 104`
 - All the given points are **unique**.
-
 ```java
 class Solution {
     public int minAreaRect(int[][] points) {//O(n^2)
@@ -72,3 +68,4 @@ class Solution {
     }
 }
 ```
+
