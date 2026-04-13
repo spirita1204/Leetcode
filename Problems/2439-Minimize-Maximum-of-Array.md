@@ -1,9 +1,6 @@
-# 2439. Minimize Maximum of Array
+# 2439. Minimize Maximum of Array  
 
-Methods: Binary Search
-Difficulty: Medium
-
-**Medium**
+  Methods: Binary Search </br> Difficulty: Medium </br> </br>**Medium**
 
 1K
 
@@ -18,12 +15,11 @@ In one operation, you must:
 - Choose an integer `i` such that `1 <= i < n` and `nums[i] > 0`.
 - Decrease `nums[i]` by 1.
 - Increase `nums[i - 1]` by 1.
-
-Return *the **minimum** possible value of the **maximum** integer of* `nums` *after performing **any** number of operations*.
+Return* the ****minimum**** possible value of the ****maximum**** integer of *`nums`* after performing ****any**** number of operations*.
 
 **Example 1:**
 
-```
+```plain text
 Input: nums = [3,7,1,6]
 Output: 5
 Explanation:
@@ -38,7 +34,7 @@ Therefore, we return 5.
 
 **Example 2:**
 
-```
+```plain text
 Input: nums = [10,1]
 Output: 10
 Explanation:
@@ -51,7 +47,6 @@ It is optimal to leave nums as is, and since 10 is the maximum value, we return 
 - `n == nums.length`
 - `2 <= n <= 105`
 - `0 <= nums[i] <= 109`
-
 ```java
 class Solution {
     public int minimizeArrayValue(int[] nums) {
@@ -80,3 +75,4 @@ class Solution {
     }
 }
 ```
+
