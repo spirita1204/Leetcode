@@ -1,10 +1,6 @@
-# 846. Hand of Straights
+# 846. Hand of Straights  
 
-Data structure: Hash Table
-Difficulty: Medium
-Similar: 1296
-
-# Medium
+  Data Structure: Hash Table </br> Difficulty: Medium </br> Similar: 1296 </br> </br># Medium
 
 Topics
 
@@ -16,7 +12,7 @@ Given an integer array `hand` where `hand[i]` is the value written on the `
 
 **Example 1:**
 
-```
+```plain text
 Input: hand = [1,2,3,6,2,3,4,7,8], groupSize = 3
 Output: true
 Explanation: Alice's hand can be rearranged as [1,2,3],[2,3,4],[6,7,8]
@@ -25,10 +21,11 @@ Explanation: Alice's hand can be rearranged as [1,2,3],[2,3,4],[6,7,8]
 
 **Example 2:**
 
-```
+```plain text
 Input: hand = [1,2,3,4,5], groupSize = 4
 Output: false
 Explanation: Alice's hand can not be rearranged into groups of 4.
+
 
 ```
 
@@ -37,7 +34,6 @@ Explanation: Alice's hand can not be rearranged into groups of 4.
 - `1 <= hand.length <= 104`
 - `0 <= hand[i] <= 109`
 - `1 <= groupSize <= hand.length`
-
 **Note:** This question is the same as 1296: [https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/)
 
 ```java
@@ -62,3 +58,4 @@ class Solution {
     }
 }
 ```
+
