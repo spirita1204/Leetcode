@@ -32,18 +32,18 @@ The maximum distance is 1 with pair (0,1).
 Input: nums1 = [30,29,19,5], nums2 = [25,25,25,25,25]
 Output: 2
 Explanation: The valid pairs are (2,2), (2,3), (2,4), (3,3), and (3,4).
-The maximum distance is 2 with pair (2,4).   
+The maximum distance is 2 with pair (2,4).     
 ```
 
-**Constraints:   **
+**Constraints:      **
 
 - `1 <= nums1.length, nums2.length <= 105`
 - `1 <= nums1[i], nums2[j] <= 105`
-- Both `nums1` and `nums2` are **non-increasing**.
+- Both `nums1` and `nums2` are **non-increasing**.  
 ```java
-class Solution {
+class Solution {    
     public int maxDistance(int[] A, int[] B) {
-        int i, j;
+        int i, j;  
 
         for (i = 0, j = 0; i < A.length && j < B.length; j++)
             if (A[i] > B[j])
