@@ -32,12 +32,12 @@ Output: 0
 **Constraints:**
 
 - `1 <= text.length <= 104`
-- `text` consists of lower case English letters only.
+- `text` consists of lower case English letters only.  
 **Note:** This question is the same as [2287: Rearrange Characters to Make Target String.](https://leetcode.com/problems/rearrange-characters-to-make-target-string/description/)
 
 ```java
 class Solution {
-    public int maxNumberOfBalloons(String s) {
+    public int maxNumberOfBalloons(String s) {  
         int[] f = new int[5];
         String t = "balon";
 
